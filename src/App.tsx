@@ -2,6 +2,7 @@ import React from 'react';
 import app from './app.module.sass';
 import Header from './components/Header';
 import Footer from './components/Footer';
+import Banner from './components/Banner';
 
 function App() {
   const ourServicesRef = React.useRef<HTMLDivElement>(null);
@@ -15,6 +16,7 @@ function App() {
   return (
     <main id={app.container} className="container column nowrap">
       <Header handleHeaderClick={handleHeaderClick}/>
+      <Banner />
       
       <Footer />
     </main>

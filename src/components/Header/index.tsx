@@ -41,6 +41,7 @@ export default function Header(props: HeaderProps) {
   };
 
   return (
+    <>
     <header id={header.container} className="container row">
       <div id={header.logo_container} className="container">
         <img src={logo} alt="Logo" />
@@ -59,10 +60,10 @@ export default function Header(props: HeaderProps) {
       ) : (
         <nav id={header.btn_row} className="container row">
           <Button type="text" onClick={() => props.handleHeaderClick(0)}>
-            Quem somos
+            Quem Somos
           </Button>
           <Button type="text" onClick={() => props.handleHeaderClick(2)}>
-            Nossos serviços
+            Onde Estamos
           </Button>
           <Button
             type="primary"
@@ -76,5 +77,7 @@ export default function Header(props: HeaderProps) {
       )}
       <div id={header.animated_border}>&nbsp;</div>
     </header>
+    <div id={header.dummy}>&nbsp;</div>
+    </>
   );
 }
