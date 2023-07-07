@@ -9,15 +9,8 @@ interface CardProps {
   longDescription: string;
 }
 
-const props: CardProps = {
-  title: "Carros",
-  imageSrc: carro,
-  shortDescription: "Bateria Moura MA 12V 60Ah",
-  longDescription:
-    "A bateria Moura MA 12v 60Ah é perfeita para você, fornecendo maior durabilidade e segurança para seu veículo.",
-};
 
-export default function Card() {
+export default function Card(props: CardProps) {
   const [isHovered, setIsHovered] = React.useState(false);
 
   return (
