@@ -23,10 +23,24 @@
     align-items: center
     justify-content: space-between
     gap: 10px
+    button 
+        display: flex
 
+.icon
+    padding: 5px 10px 0 0
+
+
+#phone_row
+    display: flex
+    align-items: center
+    justify-content: space-between
+    gap: 10px
+    button 
+        display: flex
+    
 #animated_border
     animation: gradient 1.5s ease-in-out infinite alternate
-    background: linear-gradient(-45deg,#0625d8,#2bc6e8)
+    background: linear-gradient(-45deg,#0625d8,#ff0)
     background-size: auto
     background-size: 300% 300%
     bottom: 0
@@ -34,6 +48,14 @@
     position: absolute
     width: 100%
 
+@media screen and (max-width: 768px)
+    #phone_row
+        padding: 10px 0
+        gap: 20px
+        button
+            height: 60px
+            padding: 10px 20px
+            font-size: 1.5rem
 
 @keyframes gradient 
   0% 

@@ -1,5 +1,6 @@
-import { WhatsAppOutlined } from "@ant-design/icons";
-import { Button } from "antd";
+import { WhatsAppOutlined, PhoneOutlined } from "@ant-design/icons";
+import { BsTelephone, BsWhatsapp } from "react-icons/bs";
+import { Button, ConfigProvider, Modal } from "antd";
 import * as React from "react";
 import { useMediaQuery } from "react-responsive";
 import logo from "../../assets/images/logo.webp";
@@ -11,73 +12,90 @@ type HeaderProps = {
 
 export default function Header(props: HeaderProps) {
   const isMobile = useMediaQuery({ query: "(max-width: 768px)" });
+  const isTablet = useMediaQuery({ query: "(max-width: 1024px)" });
+  const [visible, setVisible] = React.useState(false);
   const buttonRef = React.useRef<HTMLButtonElement>(null);
 
-  React.useEffect(() => {
-    const interval = setInterval(() => {
-      if (buttonRef.current) {
-        buttonRef.current.click();
-      }
-    }, 3000);
+  const handleClick = (phone: string) => {
+    const contactMessage =
+      "Olá, Vim pelo site e gostaria de saber mais sobre a BatCarva!";
+    const encodedURI = encodeURI(contactMessage);
 
-    return () => clearInterval(interval);
-  }, []);
-
-  const handleClick = (
-    e:
-      | React.MouseEvent<HTMLAnchorElement, MouseEvent>
-      | React.MouseEvent<HTMLButtonElement, MouseEvent>
-  ) => {
-    if (e.isTrusted) {
-      let contactMessage =
-        "Olá, Vim pelo site e gostaria de saber mais sobre a BatCarva!";
-      let encodedURI = encodeURI(contactMessage);
-      window.open(
-        "https://api.whatsapp.com/send?phone=557996369613" +
-          "&text=" +
-          encodedURI
-      );
-    }
+    window.open(
+      "https://api.whatsapp.com/send?phone=" + phone + "&text=" + encodedURI
+    );
   };
+
+  const btnRow = (
+    <div id={header.phone_row} className={isMobile ? `container column` : `container row`}>
+      <Button type="primary" onClick={() => window.open("tel:5579996786834")}>
+        <BsTelephone className={header.icon} />
+        (79) 99678-6834
+      </Button>
+      <ConfigProvider
+        theme={{
+          token: {
+            colorPrimary: "#04953b",
+          },
+        }}
+      >
+        <Button
+          type="primary"
+          className={header.whatsapp_btn}
+          onClick={() => handleClick("5579999700991")}
+        >
+          <BsWhatsapp className={header.icon} />
+          (79) 99970-0991
+        </Button>
+        <Button
+          type="primary"
+          className={header.whatsapp_btn}
+          onClick={() => handleClick("5579999858327")}
+        >
+          <BsWhatsapp className={header.icon} />
+          (79) 99985-8327
+        </Button>
+      </ConfigProvider>
+    </div>
+  );
 
   return (
     <>
-    <header id={header.container} className="container row">
-      <div id={header.logo_container} className="container">
-        <img src={logo} alt="Logo" />
-      </div>
-      {isMobile ? (
-        <nav id={header.btn_row} className="container row">
-          <Button
-            type="primary"
-            onClick={(e) => handleClick(e)}
-            ref={buttonRef}
-          >
-            <WhatsAppOutlined />
-            Contato
-          </Button>
-        </nav>
-      ) : (
-        <nav id={header.btn_row} className="container row">
-          <Button type="text" onClick={() => props.handleHeaderClick(0)}>
-            Quem Somos
-          </Button>
-          <Button type="text" onClick={() => props.handleHeaderClick(2)}>
-            Onde Estamos
-          </Button>
-          <Button
-            type="primary"
-            onClick={(e) => handleClick(e)}
-            ref={buttonRef}
-          >
-            <WhatsAppOutlined />
-            Entre em contato
-          </Button>
-        </nav>
-      )}
-      <div id={header.animated_border}>&nbsp;</div>
-    </header>
-    <div id={header.dummy}>&nbsp;</div>
+      <header id={header.container} className="container row">
+        <div id={header.logo_container} className="container">
+          <img src={logo} alt="Logo" />
+        </div>
+        {isMobile ? (
+          <nav id={header.btn_row} className="container column">
+            <Button
+              type="primary"
+              onClick={() => setVisible(!visible)}
+              ref={buttonRef}
+            >
+              Contato
+            </Button>
+            {visible && (
+              <Modal
+                centered={true}
+                width={isMobile ? "80%" : "100%"}
+                title="Entre em contato com a gente!"
+                open={visible}
+                onCancel={() => setVisible(false)}
+                footer={<></>}
+              >
+                {btnRow}
+              </Modal>
+            )}
+          </nav>
+        ) : (
+          <nav id={header.btn_row} className="container row">
+            {!isTablet && <span>Entre em contato:</span>}
+            {btnRow}
+          </nav>
+        )}
+        <div id={header.animated_border}>&nbsp;</div>
+      </header>
+      <div id={header.dummy}>&nbsp;</div>
     </>
   );
 }

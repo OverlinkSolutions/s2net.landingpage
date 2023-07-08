@@ -3,6 +3,7 @@ import footer from "./footer.module.sass";
 import logo from "../../assets/images/logo.webp";
 
 export default function Footer() {
+  
   return (
     <>
       <footer id={footer.container} className="container autowrap">
@@ -13,7 +14,7 @@ export default function Footer() {
             <span>24h por dia</span>
           </div>
         </aside>
-        <div className="container column">
+        <div id={footer.contact} className="container column">
           <h2>Disque Baterias</h2>
           <p>(79) 99970-0991</p>
           <p>(79) 99985-8327</p>

@@ -13,11 +13,10 @@ export default function ChooseBattery() {
   return (
     <div id={chooseBattery.container} className="container">
       <div id={chooseBattery.description} className="container column">
-        <h1>Escolha a bateria ideal para seu veículo</h1>
+        <h1>Escolha a bateria ideal para você</h1>
         <p>
-          Toda linha Moura foi projetada para aumentar a segurança e
-          durabilidade demandada pelos veículos, garantindo seu desempenho e
-          performance dos equipamentos.
+          As baterias que fornecemos foram projetadas para aumentar a segurança,
+          e durabilidade, garantindo seu desempenho e performance dos seus equipamentos.
         </p>
       </div>
       <div id={chooseBattery.cards} className="container autowrap">
@@ -55,7 +54,7 @@ export default function ChooseBattery() {
           title="Estacionárias"
           imageSrc={torre}
           shortDescription="Produzida sob um alto regime de qualidade para entregar a maior eficiência e confiabilidade."
-          longDescription="Produzida sob um alto regime de qualidade para entregar a maior eficiência e confiabilidade para as operações,  Projetadas para atender as mais severas condições climáticas da América do Sul, atendem à normas mundiais."
+          longDescription="Produzida sob um alto regime de qualidade para entregar a maior eficiência e confiabilidade para as operações. Projetadas para atender as mais severas condições climáticas da América do Sul, nossas baterias atendem à normas mundiais."
         />
       </div>
     </div>

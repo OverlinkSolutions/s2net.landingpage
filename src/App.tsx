@@ -4,6 +4,7 @@ import Header from './components/Header';
 import Footer from './components/Footer';
 import Banner from './components/Banner';
 import ChooseBattery from './components/ChooseBattery';
+import StoreMap from './components/StoreMap';
 
 function App() {
   const ourServicesRef = React.useRef<HTMLDivElement>(null);
@@ -15,10 +16,11 @@ function App() {
     refs[refName].current?.scrollIntoView({ behavior: "smooth" });
   }
   return (
-    <main id={app.container} className="container column nowrap">
+    <main id={app.container} className="container column">
       <Header handleHeaderClick={handleHeaderClick}/>
       <Banner />
       <ChooseBattery />
+      <StoreMap />
       <Footer />
     </main>
   );
