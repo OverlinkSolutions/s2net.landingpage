@@ -1,7 +1,5 @@
 import * as React from "react";
 import card from "./card.module.sass";
-import carro from "../../assets/images/carro.webp";
-
 interface CardProps {
   title: string;
   imageSrc: string;

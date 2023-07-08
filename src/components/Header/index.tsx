@@ -1,4 +1,3 @@
-import { WhatsAppOutlined, PhoneOutlined } from "@ant-design/icons";
 import { BsTelephone, BsWhatsapp } from "react-icons/bs";
 import { Button, ConfigProvider, Modal } from "antd";
 import * as React from "react";
