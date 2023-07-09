@@ -1,0 +1,19 @@
+name: Deploy
+
+on:
+  push:
+    branches: [ "main" ]
+
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: production
+
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: Move build to /var/www/batcarva
+        run: |
+          rm -rf /var/www/batcarva/*
+          mv build/* /var/www/batcarva/
