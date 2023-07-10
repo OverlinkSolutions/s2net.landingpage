@@ -9,8 +9,8 @@ export default function Banner() {
     const isMobile = useMediaQuery({ query: "(max-width: 768px)" });
 
     return (
-        <div id={banner.container} className='container'>
+        <section id={banner.container} className='container'>
             <img src={isMobile ? bannerImgMobile : bannerImg} alt="Banner BatCarva" />
-        </div>
+        </section>
     );
 }

@@ -5,11 +5,8 @@ import { useMediaQuery } from "react-responsive";
 import logo from "../../assets/images/logo.webp";
 import header from "./header.module.sass";
 
-type HeaderProps = {
-  handleHeaderClick: (refName: number) => void;
-};
 
-export default function Header(props: HeaderProps) {
+export default function Header() {
   const isMobile = useMediaQuery({ query: "(max-width: 768px)" });
   const isTablet = useMediaQuery({ query: "(max-width: 1024px)" });
   const [visible, setVisible] = React.useState(false);

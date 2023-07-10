@@ -1,4 +1,3 @@
-import * as React from "react";
 import footer from "./footer.module.sass";
 import logo from "../../assets/images/logo.webp";
 
