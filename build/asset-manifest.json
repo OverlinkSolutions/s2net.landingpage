@@ -1,23 +1,22 @@
 {
   "files": {
-    "main.css": "/static/css/main.45b92a57.css",
-    "main.js": "/static/js/main.cf94a0ab.js",
+    "main.css": "/static/css/main.2d41ae71.css",
+    "main.js": "/static/js/main.ffbf8b8d.js",
     "static/media/carga.webp": "/static/media/carga.3792e6e80c883e027504.webp",
     "static/media/carro.webp": "/static/media/carro.3e28aa05e4621a2a2420.webp",
+    "static/media/banner.png": "/static/media/banner.250d8ef6d666067de4bd.png",
     "static/media/caminhao.webp": "/static/media/caminhao.106b01a0f08ba89d31de.webp",
-    "static/media/ondeEstamos.webp": "/static/media/ondeEstamos.1afb7b846694b05921f5.webp",
     "static/media/banner_mobile.webp": "/static/media/banner_mobile.9bdced1d0abfaa8a6406.webp",
-    "static/media/banner.webp": "/static/media/banner.e596a0c5fdd44f6604d8.webp",
     "static/media/barco.webp": "/static/media/barco.0b1944460f6a7ecab3b2.webp",
     "static/media/moto.webp": "/static/media/moto.801ddefd7402f54c088c.webp",
     "static/media/torre.webp": "/static/media/torre.19cf28488a770eef0f74.webp",
     "static/media/logo.webp": "/static/media/logo.c23e93f21c2610b6b16c.webp",
     "index.html": "/index.html",
-    "main.45b92a57.css.map": "/static/css/main.45b92a57.css.map",
-    "main.cf94a0ab.js.map": "/static/js/main.cf94a0ab.js.map"
+    "main.2d41ae71.css.map": "/static/css/main.2d41ae71.css.map",
+    "main.ffbf8b8d.js.map": "/static/js/main.ffbf8b8d.js.map"
   },
   "entrypoints": [
-    "static/css/main.45b92a57.css",
-    "static/js/main.cf94a0ab.js"
+    "static/css/main.2d41ae71.css",
+    "static/js/main.ffbf8b8d.js"
   ]
 }
