@@ -38,18 +38,18 @@ export default function Header() {
         <Button
           type="primary"
           className={header.whatsapp_btn}
-          onClick={() => handleClick("5579999700991")}
+          onClick={() => handleClick("5579998501001")}
         >
           <BsWhatsapp className={header.icon} />
-          (79) 99970-0991
+          (79) 99850-1001
         </Button>
         <Button
           type="primary"
           className={header.whatsapp_btn}
-          onClick={() => handleClick("5579999858327")}
+          onClick={() => handleClick("5579996351002")}
         >
           <BsWhatsapp className={header.icon} />
-          (79) 99985-8327
+          (79) 99635-1002
         </Button>
       </ConfigProvider>
     </div>
