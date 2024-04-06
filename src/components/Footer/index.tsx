@@ -15,9 +15,8 @@ export default function Footer() {
         </aside>
         <div id={footer.contact} className="container column">
           <h2>Disque Baterias</h2>
-          <p>(79) 99970-0991</p>
-          <p>(79) 99985-8327</p>
-          <p>(79) 99678-6834</p>
+          <p>(79) 99850-1001</p>
+          <p>(79) 99635-1002</p>
         </div>
       </footer>
     </>
