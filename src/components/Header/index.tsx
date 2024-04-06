@@ -24,9 +24,13 @@ export default function Header() {
 
   const btnRow = (
     <div id={header.phone_row} className={isMobile ? `container column` : `container row`}>
-      <Button type="primary" onClick={() => window.open("tel:5579996786834")}>
+      <Button type="primary" onClick={() => window.open("tel:5579998501001")}>
         <BsTelephone className={header.icon} />
-        (79) 99678-6834
+        (79) 99850-1001
+      </Button>
+      <Button type="primary" onClick={() => window.open("tel:5579996351002")}>
+        <BsTelephone className={header.icon} />
+        (79) 99635-1002
       </Button>
       <ConfigProvider
         theme={{
