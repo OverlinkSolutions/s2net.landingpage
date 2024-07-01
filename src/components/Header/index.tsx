@@ -14,7 +14,7 @@ export default function Header() {
 
   const handleClick = (phone: string) => {
     const contactMessage =
-      "Olá, Vim pelo site e gostaria de saber mais sobre a BatCarva!";
+      "Olá, Vim pelo site e gostaria de saber mais sobre o Disk Baterias Aju!";
     const encodedURI = encodeURI(contactMessage);
 
     window.open(
@@ -24,13 +24,9 @@ export default function Header() {
 
   const btnRow = (
     <div id={header.phone_row} className={isMobile ? `container column` : `container row`}>
-      <Button type="primary" onClick={() => window.open("tel:5579998501001")}>
+      <Button type="primary" onClick={() => window.open("tel:5579999390210")}>
         <BsTelephone className={header.icon} />
-        (79) 99850-1001
-      </Button>
-      <Button type="primary" onClick={() => window.open("tel:5579996351002")}>
-        <BsTelephone className={header.icon} />
-        (79) 99635-1002
+        (79) 99939-0210
       </Button>
       <ConfigProvider
         theme={{
@@ -42,18 +38,10 @@ export default function Header() {
         <Button
           type="primary"
           className={header.whatsapp_btn}
-          onClick={() => handleClick("5579998501001")}
+          onClick={() => handleClick("5579999390210")}
         >
           <BsWhatsapp className={header.icon} />
-          (79) 99850-1001
-        </Button>
-        <Button
-          type="primary"
-          className={header.whatsapp_btn}
-          onClick={() => handleClick("5579996351002")}
-        >
-          <BsWhatsapp className={header.icon} />
-          (79) 99635-1002
+          (79) 79 99939-0210
         </Button>
       </ConfigProvider>
     </div>
@@ -95,7 +83,6 @@ export default function Header() {
         )}
         <div id={header.animated_border}>&nbsp;</div>
       </header>
-      <div id={header.dummy}>&nbsp;</div>
     </>
   );
 }
