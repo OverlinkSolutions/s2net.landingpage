@@ -21,7 +21,7 @@ export default function Footer() {
           <h2>ONDE ESTAMOS</h2>
           <div id={footer.contact}>
             <MdLocationOn className={footer.icon}/>
-            <p style={{ textAlign: "center" }}>
+            <p style={{ textAlign: "center" }} onClick={() => window.open("https://maps.app.goo.gl/wPWppHW3U5bXXVUa8","_blank")}>
               Rua Elisio Araujo, 43A
               <br />
               São Cristovão - Itabaiana/SE
@@ -29,11 +29,11 @@ export default function Footer() {
           </div>
           <div id={footer.contact}>
             <MdPhone className={footer.icon} />
-            <p>(79) 99131-0616</p>
+            <p onClick={() => window.open("tel:5579991310616")}>(79) 99131-0616</p>
           </div>
           <div id={footer.contact}>
             <MdOutlineEmail className={footer.icon}/>
-            <p>contato@s2net.net</p>
+            <p onClick={() => window.open("mailto:contato@s2net.net")}>contato@s2net.net</p>
           </div>
         </aside>
         <aside id={footer.logo_container} className="container column">
@@ -43,6 +43,14 @@ export default function Footer() {
             <BsInstagram color="white" className={footer.icon_social_media} />
           </div>
         </aside>
+      </footer>
+      <footer id={footer.under} className="container column">
+        <span>
+          © {new Date().getFullYear()} S2 NET TELECOM - Todos os direitos reservados
+        </span>
+        <span>
+         Desenvolvido por Overlink Solutions
+        </span>
       </footer>
     </>
   );
