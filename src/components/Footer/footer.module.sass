@@ -1,27 +1,38 @@
 #container
-    background: #ccc
-    color : black
+    background: #333
+    color : white
     justify-content: space-around
-    min-height: 200px
+    min-height: 300px
     padding: 0 0 20px 
-
     z-index: 999
     width: 100%
 
 #logo_container
-    width: 250px
-    height: 180px
+    width: 300px
+    min-height: 200px
     img
-        width: 80%
-        height: 80%
         object-fit: scale-down
+#icon_container 
+    display: flex
+    justify-content: space-evenly
+    width: 100%
 
+.icon
+    font-size: 1.5rem
+
+.icon_social_media
+    font-size: 1.5rem
+    &:hover
+        cursor: pointer
 #contact
-    h2
-        margin: 0 0 20px 0
-        font-family: Antonio
-        font-size: 1.8rem
+  display: flex
+  flex-direction: row
+  align-items: center
+  justify-content: center
+  gap: 20px
+  width: 100%
+  &:hover
+    cursor: pointer
     p
-        margin: 10px 0 0 
-        font-family: Anton
-        font-size: 1.2rem
+        text-decoration: underline
+        color: #93d6a7
