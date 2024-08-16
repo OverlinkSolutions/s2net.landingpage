@@ -13,7 +13,7 @@ import 'swiper/css/scrollbar';
 function App() {
   return (
     <main id={app.container} className="container column">
-      <Header/>
+      <Header offset={150}/>
       <Banner />
       <ChoosePlan />
       <StoreMap />

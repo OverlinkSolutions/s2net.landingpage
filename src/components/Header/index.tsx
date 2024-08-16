@@ -18,11 +18,26 @@ enum Section {
   SURVEY = "SURVEY",
 }
 
-export default function Header() {
+export default function Header(props: { offset: number }) {
   const isMobile = useMediaQuery({ query: "(max-width: 768px)" });
   const isTablet = useMediaQuery({ query: "(max-width: 1024px)" });
   const [visible, setVisible] = React.useState(false);
   const buttonRef = React.useRef<HTMLButtonElement>(null);
+
+  
+  const [scrolled, setScrolled] = React.useState(false);
+  const handleScroll = () => {
+    const offset = window.scrollY;
+    if (offset > props.offset ) {
+      setScrolled(true);
+    } else {
+      setScrolled(false);
+    }
+  };
+
+  React.useEffect(() => {
+    window.addEventListener("scroll", handleScroll);
+  });
 
   const handleClick = (section: Section) => {
 
@@ -33,40 +48,48 @@ export default function Header() {
       <ConfigProvider
           theme={{
             token: {
-              colorLink: colors.black,
+              colorLink: scrolled ? colors.black : colors.white,
               colorLinkHover: colors.primary,
+              colorPrimary: colors.primary,
+              colorText: scrolled ? colors.black : colors.white,
               colorBgContainer: colors.transparent,
+              colorBorder: colors.transparent,
+              colorPrimaryHover: scrolled ? colors.transparent : colors.white,
+              colorPrimaryTextHover: scrolled ? colors.black : colors.black,
             },
           }}
 
       >
-      <Button type="link" id={header.button} onClick={() => handleClick(Section.ABOUT)}>
+      <Button type={scrolled ? "link" : "default"} id={header.button} onClick={() => handleClick(Section.ABOUT)}>
         <IoBusinessOutline className={header.icon} />
         Empresa
       </Button>
-      <Button type="link" id={header.button} onClick={() => handleClick(Section.PLANS)}>
+      <Button type={scrolled ? "link" : "default"} id={header.button} onClick={() => handleClick(Section.PLANS)}>
         <SiSpeedtest className={header.icon} />
         Planos
       </Button>
-      <Button type="link" id={header.button} onClick={() => handleClick(Section.CONTACT)}>
+      <Button type={scrolled ? "link" : "default"} id={header.button} onClick={() => handleClick(Section.CONTACT)}>
         <BiSupport className={header.icon} />
         Contato
       </Button>
-      <Button type="link" id={header.button} onClick={() => handleClick(Section.SURVEY)}>
+      <Button type={scrolled ? "link" : "default"} id={header.button} onClick={() => handleClick(Section.SURVEY)}>
         <RiSurveyLine className={header.icon} />
         Pesquisa
       </Button>
       </ConfigProvider>
-
       <ConfigProvider
           theme={{
             token: {
-              colorPrimary: colors.primary,
+              colorLink: scrolled ? colors.black : colors.white,
+              colorLinkHover: colors.primary,
+              colorPrimary: colors.secondary,
+              colorText: scrolled ? colors.black : colors.white,
               colorBgContainer: colors.transparent,
             },
           }}
+
       >
-      <Button type="default" id={header.button} onClick={() => handleClick(Section.LOGIN)}>
+      <Button type={scrolled? "primary" : "default"} id={header.button} onClick={() => handleClick(Section.LOGIN)}>
         <MdLogin className={header.icon} />
         Área do Assinante
       </Button>
@@ -76,7 +99,7 @@ export default function Header() {
 
   return (
     <>
-      <header id={header.container} className="container row">
+      <header id={header.container} className={`container row ${scrolled ? header.scrolled : header.not_scrolled}`}>
         <div id={header.logo_container} className="container">
           <img src={logo} alt="Logo" />
         </div>
