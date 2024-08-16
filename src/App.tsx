@@ -16,7 +16,7 @@ function App() {
       <Header offset={150}/>
       <Banner />
       <ChoosePlan />
-      <StoreMap />
+      {/* <StoreMap /> */}
       <Footer />
     </main>
   );
