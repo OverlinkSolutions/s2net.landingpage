@@ -1,14 +1,23 @@
 import * as React from "react";
 import card from "./card.module.sass";
+import { Button } from "antd";
 interface CardProps {
   title: string;
   imageSrc: string;
   shortDescription: string;
   longDescription: string;
+} 
+
+interface CardPropsWithButton {
+  title: string;
+  imageSrc: string;
+  shortDescription: string;
+  longDescription: string;
+  button: string;
+  onClick: () => void;
 }
 
-
-export default function Card(props: CardProps) {
+export default function Card(props: CardProps | CardPropsWithButton) {
   const [isHovered, setIsHovered] = React.useState(false);
 
   return (
@@ -29,6 +38,9 @@ export default function Card(props: CardProps) {
         ) : (
           <div id={card.longContent} className="container column">
             <p>{props.longDescription}</p>
+            {"button" in props && "onClick" in props && (
+              <Button onClick={props.onClick}>{props.button}</Button>
+            )}
           </div>
         )}
       </div>

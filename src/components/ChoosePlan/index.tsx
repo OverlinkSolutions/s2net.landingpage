@@ -2,6 +2,7 @@ import * as React from "react";
 import Card from "../Card";
 import choosePlan from "./chooseplan.module.sass";
 
+import dummybanner from "../../assets/images/dummybanner.webp";
 import carro from "../../assets/images/carro.webp";
 import moto from "../../assets/images/moto.webp";
 import barco from "../../assets/images/barco.webp";
@@ -41,42 +42,54 @@ export default function ChoosePlan() {
         <div id={choosePlan.cards} className="container row">
           <Card
             title="10 MB"
-            imageSrc={carro}
+            imageSrc={dummybanner}
             shortDescription="Quero me conectar com o mundo!"
             longDescription="Ideal para navegação básica, redes sociais e streaming em qualidade padrão. Perfeito para quem não abre mão de ficar conectado."
+            button="Contratar"
+            onClick={() => console.log("Contratado")}
           />
           <Card
             title="20MB"
-            imageSrc={caminhao}
+            imageSrc={dummybanner}
             shortDescription="Você conectado a todo momento!"
             longDescription="Excelente para streaming em alta definição, videoconferências sem interrupções e downloads rápidos. Suporta bem o uso de múltiplos dispositivos simultaneamente."
+            button="Contratar"
+            onClick={() => console.log("Contratado")}
           />
           <Card
             title="30MB"
-            imageSrc={barco}
+            imageSrc={dummybanner}
             shortDescription="Para sua família ou seu negócio!"
             longDescription="Perfeito para famílias ou pequenos escritórios. Permite streaming 4K, jogos online intensivos e uploads rápidos, mantendo todos os dispositivos conectados."
+            button="Contratar"
+            onClick={() => console.log("Contratado")}
           />
         </div>
       ) : (
         <div id={choosePlan.cards} className="container row">
           <Card 
             title="100 MB"
-            imageSrc={carro}
+            imageSrc={dummybanner}
             shortDescription="Quero me conectar com o mundo!"
             longDescription="Ideal para navegação básica, redes sociais e streaming em qualidade padrão. Perfeito para quem não abre mão de ficar conectado."
+            button="Contratar"
+            onClick={() => console.log("Contratado")}
           />
           <Card
             title="200MB"
-            imageSrc={caminhao}
+            imageSrc={dummybanner}
             shortDescription="Você conectado a todo momento!"
             longDescription="Excelente para streaming em alta definição, videoconferências sem interrupções e downloads rápidos. Suporta bem o uso de múltiplos dispositivos simultaneamente."
+            button="Contratar"
+            onClick={() => console.log("Contratado")}
           />
           <Card
             title="300MB"
-            imageSrc={barco}
+            imageSrc={dummybanner}
             shortDescription="Para sua família ou seu negócio!"
             longDescription="Perfeito para famílias ou pequenos escritórios. Permite streaming 4K, jogos online intensivos e uploads rápidos, mantendo todos os dispositivos conectados."
+            button="Contratar"
+            onClick={() => console.log("Contratado")}
           />
         </div>
       )}
