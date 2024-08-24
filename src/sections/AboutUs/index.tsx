@@ -1,5 +1,5 @@
 import * as React from "react";
-import Typography from "../Typography";
+import Typography from "../../components/Typography";
 import img_novoPublico from "../../images/icon_publico.png";
 import img_quebreBarreiras from "../../images/icon_quebreBarreiras.png";
 import img_aumenteVisibilidade from "../../images/icon_visibilidade.png";
@@ -19,7 +19,7 @@ export default function AboutUs() {
 
   return (
     <>
-      <section id={about_us.container_features} className="container column">
+      <section id={about_us.container_features} className={`container column ${about_us.containerImg}`}>
         <div id={about_us.container} className="container row">
           <div id={about_us.item} className={"container column"}>
             {/* <img src={img_novoPublico} alt="Alcance um novo público" /> */}

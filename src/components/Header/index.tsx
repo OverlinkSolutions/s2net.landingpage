@@ -6,7 +6,10 @@ import { MdLogin } from "react-icons/md";
 import { Button, ConfigProvider, Modal } from "antd";
 import * as React from "react";
 import { useMediaQuery } from "react-responsive";
-import logo from "../../assets/images/logo.webp";
+import logoBranca from "../../assets/images/LOGO-BRANCA.webp";
+import logoPreta from "../../assets/images/LOGO-PRETA.webp";
+import logoColorida from "../../assets/images/LOGO-COLORIDA.webp";
+
 import header from "./header.module.sass";
 import { colors } from "../../constants";
 
@@ -101,7 +104,7 @@ export default function Header(props: { offset: number }) {
     <>
       <header id={header.container} className={`container row ${scrolled ? header.scrolled : header.not_scrolled}`}>
         <div id={header.logo_container} className="container">
-          <img src={logo} alt="Logo" />
+          <img src={scrolled? logoPreta : logoColorida} alt="Logo" />
         </div>
         {isMobile ? (
           <nav id={header.btn_row} className="container column">

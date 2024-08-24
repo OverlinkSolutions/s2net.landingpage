@@ -18,7 +18,7 @@ export default function Footer() {
           </div>
         </aside>
         <aside id={footer.logo_container} className="container column">
-          <h2>ONDE ESTAMOS</h2>
+          <h2>Contato</h2>
           <div id={footer.contact}>
             <MdLocationOn className={footer.icon}/>
             <p style={{ textAlign: "center" }} onClick={() => window.open("https://maps.app.goo.gl/wPWppHW3U5bXXVUa8","_blank")}>

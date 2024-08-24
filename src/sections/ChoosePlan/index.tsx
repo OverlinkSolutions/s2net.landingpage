@@ -1,8 +1,9 @@
 import * as React from "react";
-import Card from "../Card";
+import Card from "../../components/Card";
 import choosePlan from "./chooseplan.module.sass";
 
-import dummybanner from "../../assets/images/dummybanner.webp";
+import banner1 from "../../assets/images/FUNDO-FEED.webp";
+import banner2 from "../../assets/images/FUNDO-FEED.webp";
 import carro from "../../assets/images/carro.webp";
 import moto from "../../assets/images/moto.webp";
 import barco from "../../assets/images/barco.webp";
@@ -42,7 +43,7 @@ export default function ChoosePlan() {
         <div id={choosePlan.cards} className="container row">
           <Card
             title="10 MB"
-            imageSrc={dummybanner}
+            imageSrc={banner1}
             shortDescription="Quero me conectar com o mundo!"
             longDescription="Ideal para navegação básica, redes sociais e streaming em qualidade padrão. Perfeito para quem não abre mão de ficar conectado."
             button="Contratar"
@@ -50,7 +51,7 @@ export default function ChoosePlan() {
           />
           <Card
             title="20MB"
-            imageSrc={dummybanner}
+            imageSrc={banner1}
             shortDescription="Você conectado a todo momento!"
             longDescription="Excelente para streaming em alta definição, videoconferências sem interrupções e downloads rápidos. Suporta bem o uso de múltiplos dispositivos simultaneamente."
             button="Contratar"
@@ -58,7 +59,7 @@ export default function ChoosePlan() {
           />
           <Card
             title="30MB"
-            imageSrc={dummybanner}
+            imageSrc={banner1}
             shortDescription="Para sua família ou seu negócio!"
             longDescription="Perfeito para famílias ou pequenos escritórios. Permite streaming 4K, jogos online intensivos e uploads rápidos, mantendo todos os dispositivos conectados."
             button="Contratar"
@@ -69,7 +70,7 @@ export default function ChoosePlan() {
         <div id={choosePlan.cards} className="container row">
           <Card 
             title="100 MB"
-            imageSrc={dummybanner}
+            imageSrc={banner2}
             shortDescription="Quero me conectar com o mundo!"
             longDescription="Ideal para navegação básica, redes sociais e streaming em qualidade padrão. Perfeito para quem não abre mão de ficar conectado."
             button="Contratar"
@@ -77,7 +78,7 @@ export default function ChoosePlan() {
           />
           <Card
             title="200MB"
-            imageSrc={dummybanner}
+            imageSrc={banner2}
             shortDescription="Você conectado a todo momento!"
             longDescription="Excelente para streaming em alta definição, videoconferências sem interrupções e downloads rápidos. Suporta bem o uso de múltiplos dispositivos simultaneamente."
             button="Contratar"
@@ -85,7 +86,7 @@ export default function ChoosePlan() {
           />
           <Card
             title="300MB"
-            imageSrc={dummybanner}
+            imageSrc={banner2}
             shortDescription="Para sua família ou seu negócio!"
             longDescription="Perfeito para famílias ou pequenos escritórios. Permite streaming 4K, jogos online intensivos e uploads rápidos, mantendo todos os dispositivos conectados."
             button="Contratar"
