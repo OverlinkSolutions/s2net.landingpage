@@ -26,6 +26,8 @@
         #description
             transition: all 0.4s ease-in
 
+#actionButton
+  animation: fadeIn 0.2s ease-in-out
 
 #description
     position: absolute
@@ -43,6 +45,14 @@
         font-size: 1.5rem
         font-weight: 600
         margin: 0
+
+@keyframes fadeIn
+    from
+        opacity: 0
+    to
+        opacity: 1
+  
+  
 
 @media screen and (max-width: 768px)
     #container

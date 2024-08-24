@@ -19,6 +19,14 @@ interface CardPropsWithButton {
 
 export default function Card(props: CardProps | CardPropsWithButton) {
   const [isHovered, setIsHovered] = React.useState(false);
+  const [showButton, setShowButton] = React.useState(false);
+  setTimeout(() => {
+    setShowButton(true);
+  }, 600);
+
+  React.useEffect(() => {
+      setShowButton(false);
+  }, [!isHovered]);
 
   return (
     <div
@@ -38,8 +46,8 @@ export default function Card(props: CardProps | CardPropsWithButton) {
         ) : (
           <div id={card.longContent} className="container column">
             <p>{props.longDescription}</p>
-            {"button" in props && "onClick" in props && (
-              <Button onClick={props.onClick}>{props.button}</Button>
+            {"button" in props && "onClick" in props && showButton &&(
+              <Button id={card.actionButton} type="primary" onClick={props.onClick}>{props.button}</Button>
             )}
           </div>
         )}
