@@ -13,6 +13,7 @@ import torre from "../../assets/images/torre.webp";
 import { ConfigProvider, Radio } from "antd";
 import { SizeType } from "antd/es/config-provider/SizeContext";
 import { colors } from "../../constants";
+import NewCard from "../../components/NewCard";
 
 export default function ChoosePlan() {
   const [type, setType] = React.useState("cable");
@@ -41,7 +42,7 @@ export default function ChoosePlan() {
       </ConfigProvider>
       {type === "cable" ? (
         <div id={choosePlan.cards} className="container row">
-          <Card
+          {/* <Card
             title="10 MB"
             imageSrc={banner1}
             shortDescription="Quero me conectar com o mundo!"
@@ -64,8 +65,29 @@ export default function ChoosePlan() {
             longDescription="Perfeito para famílias ou pequenos escritórios. Permite streaming 4K, jogos online intensivos e uploads rápidos, mantendo todos os dispositivos conectados."
             button="Contratar"
             onClick={() => console.log("Contratado")}
-          />
-        </div>
+          />*/}
+          <NewCard
+            title="10 MB"
+            image={banner1}
+            description="Ideal para navegação básica, redes sociais e streaming em qualidade padrão."
+            link="https://www.google.com"
+            btnName="Contratar"
+          />  
+          <NewCard
+            title="20 MB"
+            image={banner1}
+            description="Ideal para navegação básica, redes sociais e streaming em qualidade padrão."
+            link="https://www.google.com"
+            btnName="Contratar"
+          />  
+          <NewCard
+            title="30 MB"
+            image={banner1}
+            description="Ideal para navegação básica, redes sociais e streaming em qualidade padrão."
+            link="https://www.google.com"
+            btnName="Contratar"
+          />  
+        </div> 
       ) : (
         <div id={choosePlan.cards} className="container row">
           <Card 
