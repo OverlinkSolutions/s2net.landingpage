@@ -1,4 +1,4 @@
-import { IoBusinessSharp, IoBusinessOutline } from "react-icons/io5";
+import { IoBusinessOutline } from "react-icons/io5";
 import { SiSpeedtest } from "react-icons/si";
 import { BiSupport } from "react-icons/bi";
 import { RiSurveyLine } from "react-icons/ri";
@@ -6,7 +6,6 @@ import { MdLogin } from "react-icons/md";
 import { Button, ConfigProvider, Modal } from "antd";
 import * as React from "react";
 import { useMediaQuery } from "react-responsive";
-import logoBranca from "../../assets/images/LOGO-BRANCA.webp";
 import logoPreta from "../../assets/images/LOGO-PRETA.webp";
 import logoColorida from "../../assets/images/LOGO-COLORIDA.webp";
 
@@ -26,7 +25,7 @@ enum Section {
 
 export default function Header(props: { offset: number }) {
   const isMobile = useMediaQuery({ query: "(max-width: 768px)" });
-  const isTablet = useMediaQuery({ query: "(max-width: 1024px)" });
+  // const isTablet = useMediaQuery({ query: "(max-width: 1024px)" });
   const [visible, setVisible] = React.useState(false);
   const buttonRef = React.useRef<HTMLButtonElement>(null);
 
