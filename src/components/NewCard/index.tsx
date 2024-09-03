@@ -1,6 +1,4 @@
 import { Button, Card } from "antd";
-import Meta from "antd/es/card/Meta";
-import React from "react";
 
 import newCardStyles from "./newCard.module.sass";
 import Typography from "../Typography";

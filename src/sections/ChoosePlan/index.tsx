@@ -1,26 +1,19 @@
 import * as React from "react";
 import Card from "../../components/Card";
-import choosePlan from "./chooseplan.module.sass";
+import plans from "./plans.module.sass";
 
 import banner1 from "../../assets/images/FUNDO-FEED.webp";
 import banner2 from "../../assets/images/FUNDO-FEED.webp";
-import carro from "../../assets/images/carro.webp";
-import moto from "../../assets/images/moto.webp";
-import barco from "../../assets/images/barco.webp";
-import caminhao from "../../assets/images/caminhao.webp";
-import carga from "../../assets/images/carga.webp";
-import torre from "../../assets/images/torre.webp";
 import { ConfigProvider, Radio } from "antd";
-import { SizeType } from "antd/es/config-provider/SizeContext";
 import { colors } from "../../constants";
 import NewCard from "../../components/NewCard";
 
-export default function ChoosePlan() {
+export default function Plans() {
   const [type, setType] = React.useState("cable");
 
   return (
-    <section id={choosePlan.container} className="container">
-      <div id={choosePlan.description} className="container column">
+    <section id={plans.container} className="container">
+      <div id={plans.description} className="container column">
         <h1>Escolha seu plano e fique conectado com o mundo</h1>
       </div>
       <ConfigProvider
@@ -41,31 +34,7 @@ export default function ChoosePlan() {
       </Radio.Group>
       </ConfigProvider>
       {type === "cable" ? (
-        <div id={choosePlan.cards} className="container row">
-          {/* <Card
-            title="10 MB"
-            imageSrc={banner1}
-            shortDescription="Quero me conectar com o mundo!"
-            longDescription="Ideal para navegação básica, redes sociais e streaming em qualidade padrão. Perfeito para quem não abre mão de ficar conectado."
-            button="Contratar"
-            onClick={() => console.log("Contratado")}
-          />
-          <Card
-            title="20MB"
-            imageSrc={banner1}
-            shortDescription="Você conectado a todo momento!"
-            longDescription="Excelente para streaming em alta definição, videoconferências sem interrupções e downloads rápidos. Suporta bem o uso de múltiplos dispositivos simultaneamente."
-            button="Contratar"
-            onClick={() => console.log("Contratado")}
-          />
-          <Card
-            title="30MB"
-            imageSrc={banner1}
-            shortDescription="Para sua família ou seu negócio!"
-            longDescription="Perfeito para famílias ou pequenos escritórios. Permite streaming 4K, jogos online intensivos e uploads rápidos, mantendo todos os dispositivos conectados."
-            button="Contratar"
-            onClick={() => console.log("Contratado")}
-          />*/}
+        <div id={plans.cards} className="container row">
           <NewCard
             title="10 MB"
             image={banner1}
@@ -89,7 +58,7 @@ export default function ChoosePlan() {
           />  
         </div> 
       ) : (
-        <div id={choosePlan.cards} className="container row">
+        <div id={plans.cards} className="container row">
           <Card 
             title="100 MB"
             imageSrc={banner2}

@@ -10,6 +10,9 @@ import logoBranca from "../../assets/images/LOGO-BRANCA.webp";
 import logoPreta from "../../assets/images/LOGO-PRETA.webp";
 import logoColorida from "../../assets/images/LOGO-COLORIDA.webp";
 
+import plans from "../../sections/ChoosePlan/plans.module.sass";
+import footer from "../Footer/footer.module.sass";
+
 import header from "./header.module.sass";
 import { colors } from "../../constants";
 
@@ -43,8 +46,23 @@ export default function Header(props: { offset: number }) {
   });
 
   const handleClick = (section: Section) => {
-
+    switch (section) {
+      case Section.ABOUT:
+        window.location.href = "/#"+footer.container
+        break;
+      case Section.PLANS:
+        window.location.href = "/#"+plans.container
+        break;
+      case Section.CONTACT:
+        window.location.href = "/#"+footer.container
+        break;
+      case Section.LOGIN:
+        window.open("https://central.s2net.net/central_assinante_web/login", "_blank");
+        break;
+      case Section.SURVEY:
+        window.open("https://docs.google.com/forms/d/e/1FAIpQLSeyLV283XmQ6ARe83kUw3jaa2LvPqiszMkVaujpMRbH1JQOkw/viewform", "_blank");
   };
+}
 
   const btnRow = (
     <div id={header.phone_row} className={isMobile ? `container column` : `container row`}>

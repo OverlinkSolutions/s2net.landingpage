@@ -2,9 +2,10 @@ import app from './app.module.sass';
 import Header from './components/Header';
 import Footer from './components/Footer';
 import Banner from './sections/Banner';
-import ChoosePlan from './sections/ChoosePlan';
+import Plans from './sections/ChoosePlan';
 import StoreMap from './components/StoreMap';
 import AboutUs from './sections/AboutUs';
+import Brazmovel from './sections/Brazmovel';
 
 import 'swiper/css';
 import 'swiper/css/navigation';
@@ -17,7 +18,8 @@ function App() {
       <Header offset={150}/>
       <Banner />
       <AboutUs/>
-      <ChoosePlan />
+      <Plans />
+      <Brazmovel />
       <StoreMap />
       <Footer />
     </main>
