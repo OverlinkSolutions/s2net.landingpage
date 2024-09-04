@@ -34,9 +34,9 @@ export default function Typography(props: TypographyProps) {
   }
 
   return (
-    <section id={typography.container} className="container column">
+    <section id={typography.container} className="container row">
       <div id={typography.text} className="container column">
-        <h1
+        {props.title && <h1
           style={
             titleAlignment
               ? props.fontSize
@@ -46,14 +46,14 @@ export default function Typography(props: TypographyProps) {
           }
         >
           {props.title}
-        </h1>
-        <p
+        </h1>}
+        {props.description && <p
           style={
             descriptionAlignment ? { textAlign: descriptionAlignment } : {}
           }
         >
           {props.description}
-        </p>
+        </p>}
       </div>
     </section>
   );

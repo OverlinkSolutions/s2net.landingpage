@@ -15,7 +15,7 @@ import { useMediaQuery } from "react-responsive";
 
 export default function AboutUs() {
   const isMobile = useMediaQuery({ query: "(max-width: 768px)" });
-  const iconSize = isMobile ? 20 : 50;
+  const iconSize = isMobile ? 70 : 50;
 
   return (
     <>

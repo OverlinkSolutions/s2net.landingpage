@@ -2,6 +2,7 @@ import { Button, Card } from "antd";
 
 import newCardStyles from "./newCard.module.sass";
 import Typography from "../Typography";
+import { useMediaQuery } from "react-responsive";
 
 interface NewCardProps {
   title: string;
@@ -12,6 +13,9 @@ interface NewCardProps {
 }
 
 export default function NewCard(props: NewCardProps) {
+
+  const isMobile = useMediaQuery({ query: "(max-width: 768px)" });
+
   return (
     <Card
       hoverable
@@ -37,6 +41,7 @@ export default function NewCard(props: NewCardProps) {
         {props.btnName && props.link && (
           <Button
             type="primary"
+            size={isMobile ? "large" : "middle"}
             onClick={() => window.open(props.link, "_blank")}
           >
             Contratar
