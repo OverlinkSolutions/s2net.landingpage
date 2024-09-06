@@ -7,6 +7,7 @@ import { MdPayments } from "react-icons/md";
 import { FaListCheck, FaSignal } from "react-icons/fa6";
 
 import brazmovel from "./brazmovel.module.sass";
+import { Button } from "antd";
 
 export default function Brazmovel() {
   const isMobile = useMediaQuery({ query: "(max-width: 768px)" });
@@ -16,7 +17,7 @@ export default function Brazmovel() {
     <section id={brazmovel.container}>
       <img className={brazmovel.footers} src={footer1} alt="Brazmovel" />
       <div id={brazmovel.content}>
-        <div>
+        <div className={brazmovel.contentColumn}>
           <Typography
             title="A Brazmóvel chegou na S2Net!"
             alignment={isMobile ? "center" : "left"}
@@ -57,7 +58,10 @@ export default function Brazmovel() {
             />
           </div>
         </div>
-        {/* <img src={CARD_3} /> */}
+        <div className={brazmovel.contentColumn}>
+          <img className={brazmovel.contentImg} src={CARD_3} />
+          {/* <Button>Conheça</Button> */}
+        </div>
       </div>
       <img className={brazmovel.footers} src={footer2} alt="Brazmovel" />
     </section>

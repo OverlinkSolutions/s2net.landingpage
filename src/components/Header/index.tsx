@@ -1,10 +1,12 @@
+import * as React from "react";
+import { Button, ConfigProvider, Modal } from "antd";
 import { IoBusinessOutline } from "react-icons/io5";
 import { SiSpeedtest } from "react-icons/si";
 import { BiSupport } from "react-icons/bi";
+import { BsThreeDots } from "react-icons/bs";
 import { RiSurveyLine } from "react-icons/ri";
 import { MdLogin } from "react-icons/md";
-import { Button, ConfigProvider, Modal } from "antd";
-import * as React from "react";
+import { IoIosMenu } from "react-icons/io";
 import { useMediaQuery } from "react-responsive";
 import logoPreta from "../../assets/images/LOGO-PRETA.webp";
 import logoColorida from "../../assets/images/LOGO-COLORIDA.webp";
@@ -68,31 +70,31 @@ export default function Header(props: { offset: number }) {
       <ConfigProvider
           theme={{
             token: {
-              colorLink: scrolled ? colors.black : colors.white,
+              colorLink: scrolled || isMobile ? colors.black : colors.white,
               colorLinkHover: colors.primary,
               colorPrimary: colors.primary,
-              colorText: scrolled ? colors.black : colors.white,
+              colorText: scrolled || isMobile ? colors.black : colors.white,
               colorBgContainer: colors.transparent,
               colorBorder: colors.transparent,
-              colorPrimaryHover: scrolled ? colors.transparent : colors.white,
-              colorPrimaryTextHover: scrolled ? colors.black : colors.black,
+              colorPrimaryHover: scrolled || isMobile ? colors.transparent : colors.white,
+              colorPrimaryTextHover: scrolled || isMobile ? colors.black : colors.black,
             },
           }}
 
       >
-      <Button type={scrolled ? "link" : "default"} id={header.button} onClick={() => handleClick(Section.ABOUT)}>
+      <Button type={scrolled || isMobile ? "link" : "default"} id={header.button} onClick={() => handleClick(Section.ABOUT)}>
         <IoBusinessOutline className={header.icon} />
         Empresa
       </Button>
-      <Button type={scrolled ? "link" : "default"} id={header.button} onClick={() => handleClick(Section.PLANS)}>
+      <Button type={scrolled || isMobile ? "link" : "default"} id={header.button} onClick={() => handleClick(Section.PLANS)}>
         <SiSpeedtest className={header.icon} />
         Planos
       </Button>
-      <Button type={scrolled ? "link" : "default"} id={header.button} onClick={() => handleClick(Section.CONTACT)}>
+      <Button type={scrolled || isMobile ? "link" : "default"} id={header.button} onClick={() => handleClick(Section.CONTACT)}>
         <BiSupport className={header.icon} />
         Contato
       </Button>
-      <Button type={scrolled ? "link" : "default"} id={header.button} onClick={() => handleClick(Section.SURVEY)}>
+      <Button type={scrolled || isMobile ? "link" : "default"} id={header.button} onClick={() => handleClick(Section.SURVEY)}>
         <RiSurveyLine className={header.icon} />
         Pesquisa
       </Button>
@@ -100,16 +102,16 @@ export default function Header(props: { offset: number }) {
       <ConfigProvider
           theme={{
             token: {
-              colorLink: scrolled ? colors.black : colors.white,
+              colorLink: scrolled || isMobile ? colors.black : colors.white,
               colorLinkHover: colors.primary,
               colorPrimary: colors.secondary,
-              colorText: scrolled ? colors.black : colors.white,
+              colorText: scrolled || isMobile ? colors.black : colors.white,
               colorBgContainer: colors.transparent,
             },
           }}
 
       >
-      <Button type={scrolled? "primary" : "default"} id={header.button} onClick={() => handleClick(Section.LOGIN)}>
+      <Button type={scrolled || isMobile ? "primary" : "default"} id={header.button} onClick={() => handleClick(Section.LOGIN)}>
         <MdLogin className={header.icon} />
         Área do Assinante
       </Button>
@@ -125,27 +127,15 @@ export default function Header(props: { offset: number }) {
         </div>
         {isMobile ? (
           <nav id={header.btn_row} className="container column">
-                  <ConfigProvider
-        theme={{
-          token: {
-            colorPrimary: colors.primary,
-            colorBgContainer: colors.transparent,
-          },
-        }}
-      >
+            <BsThreeDots size={30}     
+            color={scrolled ? colors.black : colors.white}          
+            onClick={() => setVisible(!visible)}
+           />
 
-            <Button
-              type="primary"
-              onClick={() => setVisible(!visible)}
-              ref={buttonRef}
-              >
-              Menu
-            </Button>
-              </ConfigProvider>
             {visible && (
               <Modal
                 centered={true}
-                width={isMobile ? "80%" : "100%"}
+                width="80%"
                 open={visible}
                 onCancel={() => setVisible(false)}
                 footer={<></>}
