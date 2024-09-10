@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.64fe3d87.css",
-    "main.js": "/static/js/main.2dacca94.js",
+    "main.css": "/static/css/main.91b335a5.css",
+    "main.js": "/static/js/main.1c0391b5.js",
     "static/media/banner2.png": "/static/media/banner2.11c2f3813e05826730f3.png",
     "static/media/banner1.png": "/static/media/banner1.3e4597868dc29ff6841e.png",
     "static/media/FUNDO-FEED-2.webp": "/static/media/FUNDO-FEED-2.714ce800ab7106fcb600.webp",
@@ -10,15 +10,14 @@
     "static/media/FUNDO-FEED.webp": "/static/media/FUNDO-FEED.5ea7c60d731f35c987bf.webp",
     "static/media/LOGO-COLORIDA.webp": "/static/media/LOGO-COLORIDA.0abcb6272edf04f0c55d.webp",
     "static/media/footer1.png": "/static/media/footer1.cba7343b73e4cfb4c9d5.png",
-    "static/media/CARD_3.webp": "/static/media/CARD_3.ea46dfab277ca0c75732.webp",
     "static/media/LOGO-PRETA.webp": "/static/media/LOGO-PRETA.7ecb0e6a3beda7b62e17.webp",
     "static/media/footer2.png": "/static/media/footer2.11baad2bedb9964540ad.png",
     "index.html": "/index.html",
-    "main.64fe3d87.css.map": "/static/css/main.64fe3d87.css.map",
-    "main.2dacca94.js.map": "/static/js/main.2dacca94.js.map"
+    "main.91b335a5.css.map": "/static/css/main.91b335a5.css.map",
+    "main.1c0391b5.js.map": "/static/js/main.1c0391b5.js.map"
   },
   "entrypoints": [
-    "static/css/main.64fe3d87.css",
-    "static/js/main.2dacca94.js"
+    "static/css/main.91b335a5.css",
+    "static/js/main.1c0391b5.js"
   ]
 }

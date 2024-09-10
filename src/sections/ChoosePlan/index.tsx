@@ -36,21 +36,21 @@ export default function Plans() {
       {type === "cable" ? (
         <div id={plans.cards} className="container row">
           <NewCard
-            title="10 MB"
+
             image={banner1}
             description="Ideal para navegação básica, redes sociais e streaming em qualidade padrão."
             link="https://www.google.com"
             btnName="Contratar"
           />  
           <NewCard
-            title="20 MB"
+
             image={banner1}
             description="Ideal para navegação básica, redes sociais e streaming em qualidade padrão."
             link="https://www.google.com"
             btnName="Contratar"
           />  
           <NewCard
-            title="30 MB"
+
             image={banner1}
             description="Ideal para navegação básica, redes sociais e streaming em qualidade padrão."
             link="https://www.google.com"

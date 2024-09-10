@@ -3,27 +3,30 @@ import { Button, Card } from "antd";
 import newCardStyles from "./newCard.module.sass";
 import Typography from "../Typography";
 import { useMediaQuery } from "react-responsive";
+import React from "react";
 
 interface NewCardProps {
-  title: string;
-  description: string;
+
+  description: React.ReactNode;
   image?: string;
   link?: string;
   btnName?: string;
+  btnBlock?: boolean;
 }
 
 export default function NewCard(props: NewCardProps) {
 
   const isMobile = useMediaQuery({ query: "(max-width: 768px)" });
 
-  return (
+  
+  return ( 
     <Card
+      bodyStyle={{display: "flex", flexDirection: "column", justifyContent: "space-between", height: "100%"}}
       hoverable
-      style={{ width: 250 }}
-      cover={
+      style={{ width: 300 }}
+      cover={ props.image &&
         <img
           className={newCardStyles.cardImage}
-          alt={`Imagem do  plano de ${props.title}`}
           src={props.image}
           onClick={() => {
             if (props.link && !props.btnName) window.open(props.link, "_blank");
@@ -32,19 +35,17 @@ export default function NewCard(props: NewCardProps) {
       }
     >
       <div id={newCardStyles.content}>
-        <Typography
-          title={props.title}
-          alignment="center"
-          description={props.description}
-          descriptionAlignment="center"
-        />
-        {props.btnName && props.link && (
+        {props.description}
+      </div>
+      <div id={newCardStyles.btn}>
+      {props.btnName && props.link && (
           <Button
+            block={props.btnBlock}
             type="primary"
             size={isMobile ? "large" : "middle"}
             onClick={() => window.open(props.link, "_blank")}
           >
-            Contratar
+            {props.btnName}
           </Button>
         )}
       </div>

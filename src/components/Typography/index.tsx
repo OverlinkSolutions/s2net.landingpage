@@ -9,7 +9,8 @@ type TypographyProps =
       descriptionAlignment: CSSAlignment;
       title: string;
       description: string;
-      fontSize?: string;
+      titleFontSize?: string;
+      descriptionFontSize?: string;
       link?: string;
     }
   | {
@@ -23,6 +24,8 @@ type TypographyProps =
 export default function Typography(props: TypographyProps) {
   let titleAlignment;
   let descriptionAlignment;
+  let titleFontSize;
+  let descriptionFontSize;
 
   if ("alignment" in props) {
     titleAlignment = props.alignment;
@@ -33,27 +36,50 @@ export default function Typography(props: TypographyProps) {
     descriptionAlignment = props.descriptionAlignment;
   }
 
+  if ("fontSize" in props) {
+    titleFontSize = props.fontSize;
+    descriptionFontSize = props.fontSize;
+  }
+
+  if ("titleFontSize" in props || "descriptionFontSize" in props) {
+    titleFontSize = props.titleFontSize;
+    descriptionFontSize = props.descriptionFontSize;
+  }
+
   return (
     <section id={typography.container} className="container row">
       <div id={typography.text} className="container column">
-        {props.title && <h1
-          style={
-            titleAlignment
-              ? props.fontSize
-                ? { textAlign: titleAlignment, fontSize: props.fontSize }
-                : { textAlign: titleAlignment }
-              : {}
-          }
-        >
-          {props.title}
-        </h1>}
-        {props.description && <p
-          style={
-            descriptionAlignment ? { textAlign: descriptionAlignment } : {}
-          }
-        >
-          {props.description}
-        </p>}
+        {props.title && (
+          <h1
+            style={
+              titleAlignment
+                ? titleFontSize
+                  ? { textAlign: titleAlignment, fontSize: titleFontSize }
+                  : { textAlign: titleAlignment }
+                : {}
+            }
+          >
+            {props.title}
+          </h1>
+        )}
+        {props.description && (
+          <p
+            style={
+              descriptionAlignment
+                ? descriptionFontSize
+                  ? {
+                      textAlign: descriptionAlignment,
+                      fontSize: descriptionFontSize,
+                    }
+                  : {
+                      textAlign: descriptionAlignment,
+                    }
+                : {}
+            }
+          >
+            {props.description}
+          </p>
+        )}
       </div>
     </section>
   );
