@@ -1,7 +1,6 @@
 import { Button, Card } from "antd";
 
 import newCardStyles from "./newCard.module.sass";
-import Typography from "../Typography";
 import { useMediaQuery } from "react-responsive";
 import React from "react";
 
