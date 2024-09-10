@@ -23,23 +23,27 @@
       flex-direction: column
   .contentRow
     display: flex
-    flex-flow: row wrap 
-    gap: 20px
-    margin: 10px
+    flex-flow: row wrap
+    justify-content: space-around 
+    gap: 50px
     height: 100%
     width: 80%
+    padding: 20px 30px
     .cardItem
       display: flex
       justify-content: center
       flex: 1 0 15%
       .description
+        display: flex
+        flex-direction: column
+        justify-content: space-between
         height: 100%
 
 .brazAdvantages
   display: flex
   flex-direction: row
   margin: 0 5%
-  gap: 25px
+  gap: 10px
 
 .footers
   height: 80px
@@ -51,8 +55,8 @@
   #content
     flex-direction: column
     .contentRow
-      width: 100%
-      gap: 1px
+      width: 90%
+      gap: 20px
     .contentColumn
       flex-direction: row
       justify-content: space-around
@@ -75,6 +79,14 @@
       flex-direction: column
       min-height: 200px
       width: 100%
+      .contentRow
+        .cardItem
+          flex: 1 0 100%
+          .description
+            display: flex
+            flex-direction: column
+            justify-content: space-between
+            height: 100%
       .contentColumn
         display: flex
         justify-content: start

@@ -36,6 +36,7 @@ export default function Plans() {
       {type === "cable" ? (
         <div id={plans.cards} className="container row">
           <NewCard
+            style={{ width: 300 }}
             title="10 MB"
             image={banner1}
             description="Ideal para navegação básica, redes sociais e streaming em qualidade padrão."
@@ -43,6 +44,7 @@ export default function Plans() {
             btnName="Contratar"
           />  
           <NewCard
+            style={{ width: 300 }}
             title="20 MB"
             image={banner1}
             description="Ideal para navegação básica, redes sociais e streaming em qualidade padrão."
@@ -50,6 +52,7 @@ export default function Plans() {
             btnName="Contratar"
           />  
           <NewCard
+            style={{ width: 300 }}
             title="30 MB"
             image={banner1}
             description="Ideal para navegação básica, redes sociais e streaming em qualidade padrão."

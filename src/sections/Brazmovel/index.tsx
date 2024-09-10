@@ -108,15 +108,16 @@ export default function Brazmovel() {
               btnBlock
               link="https://www.google.com"
               content={
-                <div>
-                  <Typography
-                    title={"Pré 4GB"}
-                    alignment="center"
-                    description={
-                      "Pra você que quer ter controle total dos seus gastos."
+                <div className={brazmovel.description}>
+                <Typography
+                title={"Pré 4GB"}
+                alignment="center"
+                description={
+                  "Pra você que quer ter controle total dos seus gastos."
                     }
                     descriptionAlignment="center"
-                  />
+                    />
+                  <div>
                   {generateAdvantages(
                     <TbPhoneCall size={iconSize} />,
                     "Ligações ilimitadas para qualquer operadora por 15 dias.",
@@ -133,6 +134,7 @@ export default function Brazmovel() {
                     "10pt"
                   )}
                 </div>
+                </div>
               }
             />
           </div>
@@ -142,11 +144,11 @@ export default function Brazmovel() {
               btnBlock
               link="https://www.google.com"
               content={
-                <div>
+                <div className={brazmovel.description}>
                   <Typography
                     title={"10GB"}
                     alignment="center"
-                    description={"Nosso plano maiss vendido!"}
+                    description={"Nosso plano mais vendido!"}
                     descriptionAlignment="center"
                   />
                   {generateAdvantages(
@@ -186,6 +188,7 @@ export default function Brazmovel() {
                     description={"Nosso plano custo benefício!"}
                     descriptionAlignment="center"
                   />
+                  <div className={brazmovel.descriptionItems}>
                   {generateAdvantages(
                     <BiReceipt size={iconSize} />,
                     "Pague no boleto",
@@ -211,6 +214,7 @@ export default function Brazmovel() {
                     "Facebook, Instagram, Tik Tok, Messenger, Tinder, e Pinterest ilimitado.",
                     "10pt"
                   )}
+                  </div>
                 </div>
               }
             />
@@ -221,7 +225,7 @@ export default function Brazmovel() {
               btnBlock
               link="https://www.google.com"
               content={
-                <div>
+                <div className={brazmovel.description}>
                   <Typography
                     title={"23GB"}
                     alignment="center"

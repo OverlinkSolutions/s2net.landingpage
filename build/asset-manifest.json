@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.593fa913.css",
-    "main.js": "/static/js/main.1a299bd5.js",
+    "main.css": "/static/css/main.8a8d7281.css",
+    "main.js": "/static/js/main.bdd0a16b.js",
     "static/media/banner2.png": "/static/media/banner2.11c2f3813e05826730f3.png",
     "static/media/banner1.png": "/static/media/banner1.3e4597868dc29ff6841e.png",
     "static/media/FUNDO-FEED-2.webp": "/static/media/FUNDO-FEED-2.714ce800ab7106fcb600.webp",
@@ -13,11 +13,11 @@
     "static/media/LOGO-PRETA.webp": "/static/media/LOGO-PRETA.7ecb0e6a3beda7b62e17.webp",
     "static/media/footer2.png": "/static/media/footer2.11baad2bedb9964540ad.png",
     "index.html": "/index.html",
-    "main.593fa913.css.map": "/static/css/main.593fa913.css.map",
-    "main.1a299bd5.js.map": "/static/js/main.1a299bd5.js.map"
+    "main.8a8d7281.css.map": "/static/css/main.8a8d7281.css.map",
+    "main.bdd0a16b.js.map": "/static/js/main.bdd0a16b.js.map"
   },
   "entrypoints": [
-    "static/css/main.593fa913.css",
-    "static/js/main.1a299bd5.js"
+    "static/css/main.8a8d7281.css",
+    "static/js/main.bdd0a16b.js"
   ]
 }
