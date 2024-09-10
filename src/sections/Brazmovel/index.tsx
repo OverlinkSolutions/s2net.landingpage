@@ -107,7 +107,7 @@ export default function Brazmovel() {
               btnName="Conheça"
               btnBlock
               link="https://www.google.com"
-              description={
+              content={
                 <div>
                   <Typography
                     title={"Pré 4GB"}
@@ -141,7 +141,7 @@ export default function Brazmovel() {
               btnName="Conheça"
               btnBlock
               link="https://www.google.com"
-              description={
+              content={
                 <div>
                   <Typography
                     title={"10GB"}
@@ -178,7 +178,7 @@ export default function Brazmovel() {
               btnName="Conheça"
               btnBlock
               link="https://www.google.com"
-              description={
+              content={
                 <div className={brazmovel.description}>
                   <Typography
                     title={"14GB"}
@@ -220,7 +220,7 @@ export default function Brazmovel() {
               btnName="Conheça"
               btnBlock
               link="https://www.google.com"
-              description={
+              content={
                 <div>
                   <Typography
                     title={"23GB"}

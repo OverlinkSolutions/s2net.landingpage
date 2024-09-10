@@ -3,10 +3,17 @@ import { Button, Card } from "antd";
 import newCardStyles from "./newCard.module.sass";
 import { useMediaQuery } from "react-responsive";
 import React from "react";
+import Typography from "../Typography";
 
-interface NewCardProps {
-
-  description: React.ReactNode;
+type NewCardProps = {
+  content: React.ReactNode;
+  image?: string;
+  link?: string;
+  btnName?: string;
+  btnBlock?: boolean;
+} | {
+  title: string;
+  description: string;
   image?: string;
   link?: string;
   btnName?: string;
@@ -16,6 +23,20 @@ interface NewCardProps {
 export default function NewCard(props: NewCardProps) {
 
   const isMobile = useMediaQuery({ query: "(max-width: 768px)" });
+  let content
+
+  if ("content" in props) {
+    content = props.content
+  } else {
+    content = (
+      <Typography
+      title={props.title}
+      alignment="center"
+      description={props.description}
+      descriptionAlignment="center"
+    />
+    )
+  }
 
   
   return ( 
@@ -34,7 +55,7 @@ export default function NewCard(props: NewCardProps) {
       }
     >
       <div id={newCardStyles.content}>
-        {props.description}
+        {content}
       </div>
       <div id={newCardStyles.btn}>
       {props.btnName && props.link && (

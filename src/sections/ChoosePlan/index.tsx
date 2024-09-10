@@ -36,20 +36,21 @@ export default function Plans() {
       {type === "cable" ? (
         <div id={plans.cards} className="container row">
           <NewCard
+            title="10 MB"
             image={banner1}
             description="Ideal para navegação básica, redes sociais e streaming em qualidade padrão."
             link="https://www.google.com"
             btnName="Contratar"
           />  
           <NewCard
-
+            title="20 MB"
             image={banner1}
             description="Ideal para navegação básica, redes sociais e streaming em qualidade padrão."
             link="https://www.google.com"
             btnName="Contratar"
           />  
           <NewCard
-
+            title="30 MB"
             image={banner1}
             description="Ideal para navegação básica, redes sociais e streaming em qualidade padrão."
             link="https://www.google.com"
@@ -58,29 +59,23 @@ export default function Plans() {
         </div> 
       ) : (
         <div id={plans.cards} className="container row">
-          <Card 
+          <NewCard 
             title="100 MB"
-            imageSrc={banner2}
-            shortDescription="Quero me conectar com o mundo!"
-            longDescription="Ideal para navegação básica, redes sociais e streaming em qualidade padrão. Perfeito para quem não abre mão de ficar conectado."
-            button="Contratar"
-            onClick={() => console.log("Contratado")}
+            image={banner2}
+            description="Quero me conectar com o mundo!"
+            btnName="Contratar"
           />
-          <Card
+          <NewCard
             title="200MB"
-            imageSrc={banner2}
-            shortDescription="Você conectado a todo momento!"
-            longDescription="Excelente para streaming em alta definição, videoconferências sem interrupções e downloads rápidos. Suporta bem o uso de múltiplos dispositivos simultaneamente."
-            button="Contratar"
-            onClick={() => console.log("Contratado")}
+            image={banner2}
+            description="Você conectado a todo momento!"
+            btnName="Contratar"
           />
-          <Card
+          <NewCard
             title="300MB"
-            imageSrc={banner2}
-            shortDescription="Para sua família ou seu negócio!"
-            longDescription="Perfeito para famílias ou pequenos escritórios. Permite streaming 4K, jogos online intensivos e uploads rápidos, mantendo todos os dispositivos conectados."
-            button="Contratar"
-            onClick={() => console.log("Contratado")}
+            image={banner2}
+            description="Para sua família ou seu negócio!"
+            btnName="Contratar"
           />
         </div>
       )}
