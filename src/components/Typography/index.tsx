@@ -12,6 +12,7 @@ type TypographyProps =
       titleFontSize?: string;
       descriptionFontSize?: string;
       link?: string;
+      className?: string;
     }
   | {
       alignment: CSSAlignment | undefined;
@@ -19,6 +20,7 @@ type TypographyProps =
       description: string;
       fontSize?: string;
       link?: string;
+      className?: string;
     };
 
 export default function Typography(props: TypographyProps) {
@@ -47,7 +49,7 @@ export default function Typography(props: TypographyProps) {
   }
 
   return (
-    <section id={typography.container} className="container row">
+    <section id={typography.container} className={`container row ${props.className}`}>
       <div id={typography.text} className="container column">
         {props.title && (
           <h1
