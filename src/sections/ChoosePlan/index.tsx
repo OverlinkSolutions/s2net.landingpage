@@ -63,18 +63,21 @@ export default function Plans() {
       ) : (
         <div id={plans.cards} className="container row">
           <NewCard 
+            style={{ width: 300 }}
             title="100 MB"
             image={banner2}
             description="Quero me conectar com o mundo!"
             btnName="Contratar"
           />
           <NewCard
+            style={{ width: 300 }}
             title="200MB"
             image={banner2}
             description="Você conectado a todo momento!"
             btnName="Contratar"
           />
           <NewCard
+            style={{ width: 300 }}
             title="300MB"
             image={banner2}
             description="Para sua família ou seu negócio!"
