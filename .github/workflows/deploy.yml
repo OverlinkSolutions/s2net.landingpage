@@ -8,7 +8,7 @@ on:
 
 jobs:
   build:
-    runs-on: production
+    runs-on: landingpages
 
     steps:
       - uses: actions/checkout@v3
