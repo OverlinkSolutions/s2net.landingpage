@@ -21,15 +21,27 @@ export default function Footer() {
           <h2>Contato</h2>
           <div id={footer.contact}>
             <MdLocationOn className={footer.icon}/>
-            <p style={{ textAlign: "center" }} onClick={() => window.open("https://maps.app.goo.gl/wPWppHW3U5bXXVUa8","_blank")}>
-              Rua Elisio Araujo, 43A
+            <p style={{ textAlign: "center" }} onClick={() => window.open("https://maps.app.goo.gl/uBpwm2tZ3wPecBqJ7","_blank")}>
+              Rua Elisio Araujo, 37
               <br />
-              São Cristovão - Itabaiana/SE
+              Bairro São Cristovão 
+              <br />
+              Itabaiana/SE
+            </p>
+          </div>
+          <div id={footer.contact}>
+            <MdLocationOn className={footer.icon}/>
+            <p style={{ textAlign: "center" }} onClick={() => window.open("https://maps.app.goo.gl/A65QqU6evaVxhBA86","_blank")}>
+              Rua Elisio Araujo, 37
+              <br />
+              Centro 
+              <br />
+              Nossa Senhora das Dores/SE
             </p>
           </div>
           <div id={footer.contact}>
             <MdPhone className={footer.icon} />
-            <p onClick={() => window.open("tel:5579991310616")}>(79) 99131-0616</p>
+            <p onClick={() => window.open("tel:080000041816")}>(79) 0800-000-4181</p>
           </div>
           <div id={footer.contact}>
             <MdOutlineEmail className={footer.icon}/>
@@ -38,9 +50,13 @@ export default function Footer() {
         </aside>
         <aside id={footer.logo_container} className="container column">
           <h2>REDES SOCIAIS</h2>
-          <div id={footer.icon_container} className="container row">
-            <BsFacebook color="white" className={footer.icon_social_media} />
-            <BsInstagram color="white" className={footer.icon_social_media} />
+          <div id={footer.contact}>
+            <BsFacebook className={footer.icon}/>
+            <p onClick={() => window.open("https://facebook.com/S2netOnline")}>/S2netOnline</p>
+          </div>
+          <div id={footer.contact}>
+            <BsInstagram className={footer.icon}/>
+            <p onClick={() => window.open("https://www.instagram.com/s2netonline")}>@s2netonline</p>
           </div>
         </aside>
       </footer>

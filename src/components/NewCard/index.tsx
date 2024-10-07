@@ -9,6 +9,7 @@ type NewCardProps = {
   content: React.ReactNode;
   image?: string;
   link?: string;
+  price?: number;
   btnName?: string;
   btnBlock?: boolean;
 } | {
@@ -16,6 +17,7 @@ type NewCardProps = {
   description: string;
   image?: string;
   link?: string;
+  price?: number;
   btnName?: string;
   btnBlock?: boolean;
 }
@@ -56,6 +58,9 @@ export default function NewCard(props: NewCardProps) {
     >
       <div id={newCardStyles.content}>
         {content}
+      </div>
+      <div id={newCardStyles.price}>
+        {props.price && <h2>{Intl.NumberFormat("pt-br",{style: "currency", currency:"BRL"}).format(props.price)}</h2>}
       </div>
       <div id={newCardStyles.btn}>
       {props.btnName && props.link && (
