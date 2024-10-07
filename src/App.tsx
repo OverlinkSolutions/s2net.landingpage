@@ -4,8 +4,9 @@ import Footer from './components/Footer';
 import Banner from './sections/Banner';
 import Plans from './sections/ChoosePlan';
 import StoreMap from './components/StoreMap';
-import AboutUs from './sections/AboutUs';
 import Brazmovel from './sections/Brazmovel';
+import OurServices from './sections/OurServices';
+
 
 import 'swiper/css';
 import 'swiper/css/navigation';
@@ -17,7 +18,7 @@ function App() {
     <main id={app.container} className="container column">
       <Header offset={150}/>
       <Banner />
-      <AboutUs/>
+      <OurServices />
       <Plans />
       <Brazmovel />
       <StoreMap />

@@ -36,6 +36,7 @@ export default function Plans() {
         <div>
           <div id={plans.cards} className="container row">
             <NewCard
+              style={{ width: 300 }}
               title="30 MB"
               image={banner1}
               description="Contrate agora por apenas*"
@@ -44,6 +45,7 @@ export default function Plans() {
               btnName="Contratar"
             />
             <NewCard
+              style={{ width: 300 }}
               title="50MB"
               image={banner1}
               description="Contrate agora por apenas*"
@@ -52,6 +54,7 @@ export default function Plans() {
               btnName="Contratar"
             />
             <NewCard
+              style={{ width: 300 }}
               title="70MB"
               image={banner1}
               description="Contrate agora por apenas*"
@@ -67,6 +70,7 @@ export default function Plans() {
       ) : (
         <div id={plans.cards} className="container row">
           <NewCard
+            style={{ width: 300 }}
             title="100MB"
             image={banner2}
             description="Contrate agora por apenas"
@@ -75,6 +79,7 @@ export default function Plans() {
             btnName="Contratar"
           />
           <NewCard
+            style={{ width: 300 }}
             title="200MB"
             image={banner2}
             description="Contrate agora por apenas"
@@ -83,6 +88,7 @@ export default function Plans() {
             btnName="Contratar"
           />
           <NewCard
+            style={{ width: 300 }}
             title="300MB"
             image={banner2}
             description="Contrate agora por apenas"
