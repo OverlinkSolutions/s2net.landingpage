@@ -32,7 +32,7 @@ export default function Footer() {
           <div id={footer.contact}>
             <MdLocationOn className={footer.icon}/>
             <p style={{ textAlign: "center" }} onClick={() => window.open("https://maps.app.goo.gl/A65QqU6evaVxhBA86","_blank")}>
-              Rua Elisio Araujo, 37
+             praça Joel Nascimento, 140
               <br />
               Centro 
               <br />
