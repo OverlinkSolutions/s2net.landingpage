@@ -64,7 +64,7 @@ export default function Footer() {
         <span>
           © {new Date().getFullYear()} S2 NET TELECOM - Todos os direitos reservados
         </span>
-        <span>
+        <span id={footer.overlink} onClick={() => window.open("https://overlinksolutions.com.br")}>
          Desenvolvido por Overlink Solutions
         </span>
       </footer>
