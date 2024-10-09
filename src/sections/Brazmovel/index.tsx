@@ -106,7 +106,7 @@ export default function Brazmovel() {
             <Card
               btnName="Conheça"
               btnBlock
-              link="https://www.google.com"
+              link="https://wa.me/557908000004181?text=Olá, Vim pelo site da S2Net e gostaria de contratar o plano de 4GB da Braz"
               content={
                 <div className={brazmovel.description}>
                 <Typography
@@ -142,7 +142,7 @@ export default function Brazmovel() {
             <Card
               btnName="Conheça"
               btnBlock
-              link="https://www.google.com"
+              link="https://wa.me/557908000004181?text=Olá, Vim pelo site da S2Net e gostaria de contratar o plano de 10GB da Braz"
               content={
                 <div className={brazmovel.description}>
                   <Typography
@@ -179,7 +179,7 @@ export default function Brazmovel() {
             <Card
               btnName="Conheça"
               btnBlock
-              link="https://www.google.com"
+              link="https://wa.me/557908000004181?text=Olá, Vim pelo site da S2Net e gostaria de contratar o plano de 14GB da Braz"
               content={
                 <div className={brazmovel.description}>
                   <Typography
@@ -223,7 +223,7 @@ export default function Brazmovel() {
             <Card
               btnName="Conheça"
               btnBlock
-              link="https://www.google.com"
+              link="https://wa.me/557908000004181?text=Olá, Vim pelo site da S2Net e gostaria de contratar o plano de 23GB da Braz"
               content={
                 <div className={brazmovel.description}>
                   <Typography
