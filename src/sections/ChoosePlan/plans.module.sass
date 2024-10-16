@@ -1,17 +1,51 @@
 #container
+    display: flex
+    justify-content: center
     flex-direction: column
     margin: 50px 0 0 0
+    width: 100%
+    
 
 #description
     height: 100%
     width: 100%
     margin: 0 0 40px
-    justify-content: start
+    justify-content: flex-start
 
 #cards
-    margin: 30px 0
-    gap: 40px
-    width: 100%
+  display: flex
+  flex-direction: row
+  align-items: center
+  justify-content: center
+  width: 100%
+  gap: 40px
+  #contentRow
+    display: flex
+    flex-flow: row wrap
+    justify-content: space-around 
+    gap: 50px
+    width: 90%
+    padding: 20px 30px
+    .cardItem
+      display: flex
+      justify-content: center
+      align-items: center
+      >:first-child
+        display: flex
+        flex-direction: column
+        height: 100%
+      .description
+        display: flex
+        flex-direction: column
+        justify-content: space-between
+        height: 100%
+
+  
+.advantages
+  display: flex
+  flex-direction: row
+  margin: 0 5%
+  gap: 10px
 
 
 @media screen and (max-width: 768px)
