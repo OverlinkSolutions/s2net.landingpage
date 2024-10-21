@@ -6,9 +6,9 @@ type CSSAlignment = "center" | "left" | "right" | "justify";
 type TypographyProps =
   | {
       titleAlignment: CSSAlignment;
-      descriptionAlignment: CSSAlignment;
+      descriptionAlignment?: CSSAlignment;
       title: string;
-      description: string;
+      description?: string;
       titleFontSize?: string;
       descriptionFontSize?: string;
       link?: string;
@@ -17,7 +17,7 @@ type TypographyProps =
   | {
       alignment: CSSAlignment | undefined;
       title: string;
-      description: string;
+      description?: string;
       fontSize?: string;
       link?: string;
       className?: string;

@@ -26,6 +26,7 @@ export default function Plans() {
 
   const isMobile = useMediaQuery({ query: "(max-width: 768px)" });
   const iconSize = isMobile ? 30 : 25;
+  const cardWidth = isMobile ? 360 : 360;
 
   const generateAdvantages = (
     icon: any,
@@ -68,176 +69,13 @@ export default function Plans() {
           },
         }}
       >
-        <Radio.Group
-          buttonStyle="solid"
-          value={type}
-          onChange={(e) => setType(e.target.value)}
-        >
-          <Radio.Button value="cable">Cabo</Radio.Button>
-          <Radio.Button value="fiber">Fibra</Radio.Button>
-        </Radio.Group>
       </ConfigProvider>
-      {type === "cable" ? (
         <div id={plans.cards} className="container row">
-          <div id={plans.contentRow}>
-            <div className={plans.cardItem}>
-              <NewCard
-                style={{ width: 300 }}
-                title="30 MB"
-                image={trintamb}
-                description="Contrate agora por apenas*"
-                price={39.9}
-                link="https://wa.me/557908000004181?text=Olá, Vim pelo site da S2Net e gostaria de contratar o plano de 30MB"
-                btnName="Contratar"
-                content={
-                  <div className={plans.description}>
-                    <Typography
-                      title={"30MB"}
-                      alignment="center"
-                      description={"Pra você que quer ficar sempre conectado."}
-                      descriptionAlignment="center"
-                    />
-                    <div>
-                      {generateAdvantages(
-                        <GiNetworkBars size={iconSize} />,
-                        "Conexão estável",
-                        "10pt"
-                      )}
-                      {generateAdvantages(
-                        <MdLiveTv size={iconSize} />,
-                        "Streaming em Qualidade",
-                        "10pt"
-                      )}
-                      {generateAdvantages(
-                        <GiReceiveMoney size={iconSize} />,
-                        "Ótimo Custo-Benefício",
-                        "10pt"
-                      )}
-                      <Typography
-                        title={""}
-                        alignment="center"
-                        description={"Contrate agora por apenas*"}
-                        descriptionAlignment="center"
-                      />
-                    </div>
-                  </div>
-                }
-              />
-            </div>
-            <div className={plans.cardItem}>
-              <NewCard
-                style={{ width: 300 }}
-                title="50MB"
-                image={cinquentamb}
-                description="Contrate agora por apenas*"
-                price={49.9}
-                link="https://wa.me/557908000004181?text=Olá, Vim pelo site da S2Net e gostaria de contratar o plano de 50MB"
-                btnName="Contratar"
-                content={
-                  <div className={plans.description}>
-                    <Typography
-                      title={"50MB"}
-                      alignment="center"
-                      description={"Ideal para jogos e streaming"}
-                      descriptionAlignment="center"
-                    />
-                    <div>
-                      {generateAdvantages(
-                        <GiNetworkBars size={iconSize} />,
-                        "Velocidade Aumentada",
-                        "10pt"
-                      )}
-                      {generateAdvantages(
-                        <MdLiveTv size={iconSize} />,
-                        "Streaming sem Buffer",
-                        "10pt"
-                      )}
-                      {generateAdvantages(
-                        <CgGames size={iconSize} />,
-                        "Jogos Online Fluídos",
-                        "10pt"
-                      )}
-                      {generateAdvantages(
-                        <BiSupport size={iconSize} />,
-                        "Suporte Técnico Dedicado",
-                        "10pt"
-                      )}
-                      <Typography
-                        title={""}
-                        alignment="center"
-                        description={"Contrate agora por apenas*"}
-                        descriptionAlignment="center"
-                      />
-                    </div>
-                  </div>
-                }
-              />
-            </div>
-            <div className={plans.cardItem}>
-              <NewCard
-                style={{ width: 300 }}
-                title="70MB"
-                image={setentamb}
-                description="Contrate agora por apenas*"
-                price={59.9}
-                link="https://wa.me/557908000004181?text=Olá, Vim pelo site da S2Net e gostaria de contratar o plano de 70MB"
-                btnName="Contratar"
-                content={
-                  <div className={plans.description}>
-                    <Typography
-                      title={"70MB"}
-                      alignment="center"
-                      description={"Você e sua família conectada!"}
-                      descriptionAlignment="center"
-                    />
-                    <div>
-                      {generateAdvantages(
-                        <GiNetworkBars size={iconSize} />,
-                        "Conexão Ultra-Rápida",
-                        "10pt"
-                      )}
-                      {generateAdvantages(
-                        <MdLiveTv size={iconSize} />,
-                        "Transmissão em 4K",
-                        "10pt"
-                      )}
-                      {generateAdvantages(
-                        <BiDevices size={iconSize} />,
-                        "Vários Dispositivos ao Mesmo Tempo",
-                        "10pt"
-                      )}
-                      {generateAdvantages(
-                        <BiSupport size={iconSize} />,
-                        "Suporte Técnico Dedicado",
-                        "10pt"
-                      )}
-                      {generateAdvantages(
-                        <FiTool size={iconSize} />,
-                        "Instalação Personalizada",
-                        "10pt"
-                      )}
-                      <Typography
-                        title={""}
-                        alignment="center"
-                        description={"Contrate agora por apenas*"}
-                        descriptionAlignment="center"
-                      />
-                    </div>
-                  </div>
-                }
-              />
-            </div>
-          </div>
-          <div id={plans.cards} className="container row">
-            <p>* Apenas para clientes com pagamento em dia</p>
-          </div>
-        </div>
-      ) : (
         <div id={plans.cards} className="container row">
                     <div id={plans.contentRow}>
           <div className={plans.cardItem}>
             <NewCard
-              style={{ width: 300 }}
+              style={{ width: cardWidth }}
               title="100MB"
               image={cemmb}
               description="Contrate agora por apenas"
@@ -285,7 +123,7 @@ export default function Plans() {
           </div>
           <div className={plans.cardItem}>
             <NewCard
-              style={{ width: 300 }}
+              style={{ width: cardWidth }}
               title="200MB"
               image={duzentosmb}
               description="Contrate agora por apenas"
@@ -333,7 +171,7 @@ export default function Plans() {
           </div>
           <div className={plans.cardItem}>
             <NewCard
-              style={{ width: 300 }}
+              style={{ width: cardWidth }}
               title="300MB"
               image={trezentosmb}
               description="Contrate agora por apenas"
@@ -386,7 +224,127 @@ export default function Plans() {
           </div>
           </div>
         </div>
-      )}
+          <div id={plans.contentRow}>
+            <div className={plans.cardItem}>
+              <NewCard
+                style={{ width: cardWidth }}
+                title="30 MB"
+                image={trintamb}
+                description="Contrate agora por apenas*"
+                price={"R$ 39.90*"}
+                link="https://wa.me/557908000004181?text=Olá, Vim pelo site da S2Net e gostaria de contratar o plano de 30MB"
+                btnName="Contratar"
+                content={
+                  <div className={plans.description}>
+                    <h1 className={plans.cardTitle}>30MB</h1>
+                    <div>
+                      {generateAdvantages(
+                        <GiNetworkBars size={iconSize} />,
+                        "Conexão estável",
+                        "10pt"
+                      )}
+                      {generateAdvantages(
+                        <MdLiveTv size={iconSize} />,
+                        "Streaming em Qualidade",
+                        "10pt"
+                      )}
+                      {generateAdvantages(
+                        <GiReceiveMoney size={iconSize} />,
+                        "Ótimo Custo-Benefício",
+                        "10pt"
+                      )}
+
+                    </div>
+                  </div>
+                }
+              />
+            </div>
+            <div className={plans.cardItem}>
+              <NewCard
+                style={{ width: cardWidth }}
+                title="50MB"
+                image={cinquentamb}
+                description="Contrate agora por apenas*"
+                price={"R$ 49.90*"}
+                link="https://wa.me/557908000004181?text=Olá, Vim pelo site da S2Net e gostaria de contratar o plano de 50MB"
+                btnName="Contratar"
+                content={
+                  <div className={plans.description}>
+                    <h1 className={plans.cardTitle}>50MB</h1>
+                    <div>
+                      {generateAdvantages(
+                        <GiNetworkBars size={iconSize} />,
+                        "Velocidade Aumentada",
+                        "10pt"
+                      )}
+                      {generateAdvantages(
+                        <MdLiveTv size={iconSize} />,
+                        "Streaming sem Buffer",
+                        "10pt"
+                      )}
+                      {generateAdvantages(
+                        <CgGames size={iconSize} />,
+                        "Jogos Online Fluídos",
+                        "10pt"
+                      )}
+                      {generateAdvantages(
+                        <BiSupport size={iconSize} />,
+                        "Suporte Técnico Dedicado",
+                        "10pt"
+                      )}
+                    </div>
+                  </div>
+                }
+              />
+            </div>
+            <div className={plans.cardItem}>
+              <NewCard
+                style={{ width: cardWidth }}
+                title="70MB"
+                image={setentamb}
+                description="Contrate agora por apenas*"
+                price={"R$ 59.90*"}
+                link="https://wa.me/557908000004181?text=Olá, Vim pelo site da S2Net e gostaria de contratar o plano de 70MB"
+                btnName="Contratar"
+                content={
+                  <div className={plans.description}>
+                    <h1 className={plans.cardTitle}>70MB</h1>
+                    <div>
+                      {generateAdvantages(
+                        <GiNetworkBars size={iconSize} />,
+                        "Conexão Ultra-Rápida",
+                        "10pt"
+                      )}
+                      {generateAdvantages(
+                        <MdLiveTv size={iconSize} />,
+                        "Transmissão em 4K",
+                        "10pt"
+                      )}
+                      {generateAdvantages(
+                        <BiDevices size={iconSize} />,
+                        "Vários Dispositivos ao Mesmo Tempo",
+                        "10pt"
+                      )}
+                      {generateAdvantages(
+                        <BiSupport size={iconSize} />,
+                        "Suporte Técnico Dedicado",
+                        "10pt"
+                      )}
+                      {generateAdvantages(
+                        <FiTool size={iconSize} />,
+                        "Instalação Personalizada",
+                        "10pt"
+                      )}
+                    </div>
+                  </div>
+                }
+              />
+            </div>
+          </div>
+          <div id={plans.cards} className="container row">
+            <p>* Apenas para clientes com pagamento em dia</p>
+          </div>
+        </div>
     </section>
   );
 }

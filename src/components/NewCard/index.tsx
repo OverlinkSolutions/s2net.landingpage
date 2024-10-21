@@ -18,7 +18,7 @@ type NewCardProps = {
   description: string;
   image?: string;
   link?: string;
-  price?: number;
+  price?: number | string;
   btnName?: string;
   btnBlock?: boolean;
   style?: React.CSSProperties;
@@ -63,7 +63,7 @@ export default function NewCard(props: NewCardProps) {
         {content}
       </div>
       <div id={newCardStyles.price}>
-        {props.price && <h2>{Intl.NumberFormat("pt-br",{style: "currency", currency:"BRL"}).format(props.price)}</h2>}
+        {props.price && ( typeof(props.price) === "number" ? <h2>{Intl.NumberFormat("pt-br",{style: "currency", currency:"BRL"}).format(props.price)}</h2> : <h2>{props.price}</h2>)}
       </div>
       <div id={newCardStyles.btn}>
       {props.btnName && props.link && (
