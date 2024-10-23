@@ -6,6 +6,7 @@ import Plans from './sections/ChoosePlan';
 import StoreMap from './components/StoreMap';
 import Brazmovel from './sections/Brazmovel';
 import OurServices from './sections/OurServices';
+import PromoITTV from './sections/PromoITTV';
 
 
 import 'swiper/css';
@@ -20,6 +21,7 @@ function App() {
       <Banner />
       <OurServices />
       <Plans />
+      <PromoITTV/>
       <Brazmovel />
       <StoreMap />
       <Footer />

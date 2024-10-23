@@ -1,15 +1,16 @@
 import * as React from "react";
-import { ConfigProvider, Radio } from "antd";
+import { ConfigProvider } from "antd";
 import plans from "./plans.module.sass";
 import { useMediaQuery } from "react-responsive";
 
 import { MdLiveTv } from "react-icons/md";
-import { GiNetworkBars, GiReceiveMoney } from "react-icons/gi";
+import { GiReceiveMoney } from "react-icons/gi";
 import { BiSupport, BiDevices } from "react-icons/bi";
 import { FiTool } from "react-icons/fi";
 import { CgGames } from "react-icons/cg";
 import { FaRegStar } from "react-icons/fa";
 import { RiSpeedUpFill } from "react-icons/ri";
+import { LuBookMarked } from "react-icons/lu";
 
 import { colors } from "../../constants";
 import NewCard from "../../components/NewCard";
@@ -112,17 +113,12 @@ export default function Plans() {
                     )}
                     {generateAdvantages(
                       <MdLiveTv size={iconSize} />,
-                      "Streaming em 8K",
+                      "Plano Ittv Smart Total incluso",
                       "10pt"
                     )}
                     {generateAdvantages(
-                      <BiDevices size={iconSize} />,
-                      "Vários Dispositivos ao Mesmo Tempo",
-                      "10pt"
-                    )}
-                    {generateAdvantages(
-                      <FaRegStar size={iconSize} />,
-                      "Acesso a Conteúdos Exclusivos",
+                      <LuBookMarked size={iconSize} />,
+                      "Acesso a plataforma LevEduca",
                       "10pt"
                     )}
                     {generateAdvantages(
@@ -162,12 +158,12 @@ export default function Plans() {
                     )}
                     {generateAdvantages(
                       <MdLiveTv size={iconSize} />,
-                      "Transmissão em 4K",
+                      "Plano Ittv Smart Total incluso",
                       "10pt"
                     )}
                     {generateAdvantages(
-                      <BiDevices size={iconSize} />,
-                      "Vários Dispositivos ao Mesmo Tempo",
+                      <LuBookMarked size={iconSize} />,
+                      "Acesso a plataforma LevEduca",
                       "10pt"
                     )}
                     {generateAdvantages(
@@ -207,12 +203,12 @@ export default function Plans() {
                     )}
                     {generateAdvantages(
                       <MdLiveTv size={iconSize} />,
-                      "Transmissão em 4K",
+                      "Plano Ittv Smart Plus incluso",
                       "10pt"
                     )}
                     {generateAdvantages(
-                      <BiDevices size={iconSize} />,
-                      "Vários Dispositivos ao Mesmo Tempo",
+                      <LuBookMarked size={iconSize} />,
+                      "Acesso a plataforma LevEduca",
                       "10pt"
                     )}
                     {generateAdvantages(
@@ -249,22 +245,17 @@ export default function Plans() {
                     )}
                     {generateAdvantages(
                       <MdLiveTv size={iconSize} />,
-                      "Transmissão em 4K",
+                      "Plano Ittv Smart Mini incluso",
                       "10pt"
                     )}
                     {generateAdvantages(
-                      <BiDevices size={iconSize} />,
-                      "Vários Dispositivos ao Mesmo Tempo",
+                      <LuBookMarked size={iconSize} />,
+                      "Acesso a plataforma LevEduca",
                       "10pt"
                     )}
                     {generateAdvantages(
                       <BiSupport size={iconSize} />,
                       "Suporte Técnico Dedicado",
-                      "10pt"
-                    )}
-                    {generateAdvantages(
-                      <FiTool size={iconSize} />,
-                      "Instalação Personalizada",
                       "10pt"
                     )}
                   </div>
@@ -291,12 +282,12 @@ export default function Plans() {
                     )}
                     {generateAdvantages(
                       <MdLiveTv size={iconSize} />,
-                      "Streaming sem Buffer",
+                      "Plano Ittv Smart Mini incluso",
                       "10pt"
                     )}
                     {generateAdvantages(
-                      <CgGames size={iconSize} />,
-                      "Jogos Online Fluídos",
+                      <LuBookMarked size={iconSize} />,
+                      "Acesso a plataforma LevEduca",
                       "10pt"
                     )}
                     {generateAdvantages(
@@ -328,7 +319,12 @@ export default function Plans() {
                     )}
                     {generateAdvantages(
                       <MdLiveTv size={iconSize} />,
-                      "Streaming em Qualidade",
+                      "Plano Ittv Smart Abertos incluso",
+                      "10pt"
+                    )}
+                    {generateAdvantages(
+                      <LuBookMarked size={iconSize} />,
+                      "Acesso a plataforma LevEduca",
                       "10pt"
                     )}
                     {generateAdvantages(
