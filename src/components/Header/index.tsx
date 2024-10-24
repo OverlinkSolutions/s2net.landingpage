@@ -56,6 +56,7 @@ export default function Header(props: { offset: number }) {
         break;
       case Section.ABOUT:
         navigate("/empresa");
+        window.scrollTo(0, 0);
         break;
       case Section.PLANS:
         window.location.href = "/#"+plans.container
