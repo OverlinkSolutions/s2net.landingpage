@@ -1,10 +1,11 @@
 {
   "files": {
-    "main.css": "/static/css/main.c618735f.css",
-    "main.js": "/static/js/main.fa82cdb1.js",
+    "main.css": "/static/css/main.62f4175e.css",
+    "main.js": "/static/js/main.eacd9b77.js",
     "static/media/bannerITTV.png": "/static/media/bannerITTV.cd70b3f8951cadc93bc7.png",
     "static/media/banner2.png": "/static/media/banner2.11c2f3813e05826730f3.png",
     "static/media/planosmart.webp": "/static/media/planosmart.bb0508b2aeb153b9119d.webp",
+    "static/media/empresa2.png": "/static/media/empresa2.7259ec0094af0c9de6fa.png",
     "static/media/planoplus.webp": "/static/media/planoplus.ae46cf07f6c4ef525873.webp",
     "static/media/planomini.webp": "/static/media/planomini.85aac9f90968ce5ae8ab.webp",
     "static/media/banner1.png": "/static/media/banner1.3e4597868dc29ff6841e.png",
@@ -24,11 +25,11 @@
     "static/media/30mb.png": "/static/media/30mb.cce58cfc5f752fed349a.png",
     "static/media/footer2.png": "/static/media/footer2.11baad2bedb9964540ad.png",
     "index.html": "/index.html",
-    "main.c618735f.css.map": "/static/css/main.c618735f.css.map",
-    "main.fa82cdb1.js.map": "/static/js/main.fa82cdb1.js.map"
+    "main.62f4175e.css.map": "/static/css/main.62f4175e.css.map",
+    "main.eacd9b77.js.map": "/static/js/main.eacd9b77.js.map"
   },
   "entrypoints": [
-    "static/css/main.c618735f.css",
-    "static/js/main.fa82cdb1.js"
+    "static/css/main.62f4175e.css",
+    "static/js/main.eacd9b77.js"
   ]
 }

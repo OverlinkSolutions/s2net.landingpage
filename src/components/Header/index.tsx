@@ -3,21 +3,23 @@ import { Button, ConfigProvider, Modal } from "antd";
 import { IoBusinessOutline } from "react-icons/io5";
 import { SiSpeedtest } from "react-icons/si";
 import { BiSupport } from "react-icons/bi";
-import { BsThreeDots } from "react-icons/bs";
 import { RiSurveyLine } from "react-icons/ri";
 import { MdLogin } from "react-icons/md";
 import { IoIosMenu } from "react-icons/io";
+import { useNavigate } from "react-router-dom";
+
 import { useMediaQuery } from "react-responsive";
 import logoPreta from "../../assets/images/LOGO-PRETA.webp";
 import logoColorida from "../../assets/images/LOGO-COLORIDA.webp";
 
-import plans from "../../sections/ChoosePlan/plans.module.sass";
+import plans from "../../pages/home/sections/ChoosePlan/plans.module.sass";
 import footer from "../Footer/footer.module.sass";
 
 import header from "./header.module.sass";
 import { colors } from "../../constants";
 
 enum Section {
+  HOME = "HOME",
   ABOUT = "ABOUT",
   PLANS = "PLANS",
   CONTACT = "CONTACT",
@@ -26,30 +28,34 @@ enum Section {
 }
 
 export default function Header(props: { offset: number }) {
+  const navigate = useNavigate();
   const isMobile = useMediaQuery({ query: "(max-width: 768px)" });
-  // const isTablet = useMediaQuery({ query: "(max-width: 1024px)" });
   const [visible, setVisible] = React.useState(false);
-  const buttonRef = React.useRef<HTMLButtonElement>(null);
 
   
-  const [scrolled, setScrolled] = React.useState(false);
-  const handleScroll = () => {
-    const offset = window.scrollY;
-    if (offset > props.offset ) {
-      setScrolled(true);
-    } else {
-      setScrolled(false);
-    }
-  };
+  const scrolled = true 
+  //const [scrolled, setScrolled] = React.useState(true);
+  // const handleScroll = () => {
+  //   const offset = window.scrollY;
+  //   if (offset > props.offset ) {
+  //     setScrolled(true);
+  //   } else {
+  //     setScrolled(false);
+  //   }
+  // };
 
-  React.useEffect(() => {
-    window.addEventListener("scroll", handleScroll);
-  });
+  // React.useEffect(() => {
+  //   window.addEventListener("scroll", handleScroll);
+  // });
 
   const handleClick = (section: Section) => {
     switch (section) {
+      case Section.HOME:
+        navigate("/");
+        window.scrollTo(0, 0);
+        break;
       case Section.ABOUT:
-        window.location.href = "/#"+footer.container
+        navigate("/empresa");
         break;
       case Section.PLANS:
         window.location.href = "/#"+plans.container
@@ -122,12 +128,12 @@ export default function Header(props: { offset: number }) {
   return (
     <>
       <header id={header.container} className={`container row ${scrolled ? header.scrolled : header.not_scrolled}`}>
-        <div id={header.logo_container} className="container">
-          <img src={scrolled? logoPreta : logoColorida} alt="Logo" />
+        <div id={header.logo_container} className="container" onClick={() => handleClick(Section.HOME)}>
+          <img src={scrolled? logoPreta : logoColorida} alt="Logo"/>
         </div>
         {isMobile ? (
           <nav id={header.btn_row} className="container column">
-            <BsThreeDots size={30}     
+            <IoIosMenu size={30}     
             color={scrolled ? colors.black : colors.white}          
             onClick={() => setVisible(!visible)}
            />

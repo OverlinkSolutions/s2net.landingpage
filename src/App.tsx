@@ -1,12 +1,12 @@
 import app from './app.module.sass';
 import Header from './components/Header';
 import Footer from './components/Footer';
-import Banner from './sections/Banner';
-import Plans from './sections/ChoosePlan';
+import Banner from './pages/home/sections/Banner';
+import Plans from './pages/home/sections/ChoosePlan';
 import StoreMap from './components/StoreMap';
-import Brazmovel from './sections/Brazmovel';
-import OurServices from './sections/OurServices';
-import PromoITTV from './sections/PromoITTV';
+import Brazmovel from './pages/home/sections/Brazmovel';
+import OurServices from './pages/home/sections/OurServices';
+import PromoITTV from './pages/home/sections/PromoITTV';
 
 
 import 'swiper/css';

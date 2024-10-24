@@ -1,0 +1,68 @@
+#container
+    display: flex
+    justify-content: center
+    flex-direction: column
+    margin: 50px 0 0 0
+    width: 100%
+
+
+#description
+    height: 100%
+    width: 100%
+    margin: 0 0 40px
+    justify-content: flex-start
+
+#cards
+  display: flex
+  flex-direction: row
+  align-items: center
+  justify-content: center
+  width: 100%
+  gap: 40px
+  #contentRow
+    display: flex
+    flex-flow: row wrap
+    justify-content: space-around 
+    gap: 50px
+    width: 100%
+    padding: 20px 30px
+    .cardItem
+      display: flex
+      justify-content: center
+      align-items: center
+      width: 280px !important
+      height: auto
+      >:first-child
+        display: flex
+        flex-direction: column
+        height: 100%
+        border: 2px solid #ddd
+      .description
+        display: flex
+        flex-direction: column
+        justify-content: space-between
+        width: 90%
+
+.cardTitle
+  font-size: 1.5rem
+  text-align: center
+
+.advantages
+  display: flex
+  flex-direction: row
+  margin: 0 5%
+  gap: 10px
+  width: 100%
+
+@media screen and (max-width: 768px)
+    #container
+        flex-direction: column
+    #description
+        width: 80%
+        justify-content: center
+        text-align: center
+        margin: 0 
+    #cards
+        width: 100%
+        margin: 20px 0 0 0
+        gap: 20px
