@@ -62,7 +62,8 @@ export default function Header(props: { offset: number }) {
         window.location.href = "/#"+plans.container
         break;
       case Section.CONTACT:
-        window.location.href = "/#"+footer.container
+        navigate("/contact");
+        window.scrollTo(0, 0);
         break;
       case Section.LOGIN:
         window.open("https://central.s2net.net/central_assinante_web/login", "_blank");
