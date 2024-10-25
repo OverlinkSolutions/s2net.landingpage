@@ -1,6 +1,7 @@
 import React from 'react';
 import { Button, Form, Input, Select, Space } from 'antd';
 import TextArea from 'antd/es/input/TextArea';
+import { useMediaQuery } from 'react-responsive';
 
 
 const SubmitButton = ({ form, children }:any) => {
@@ -24,6 +25,7 @@ const SubmitButton = ({ form, children }:any) => {
 
 
 export default function ContactForm() {
+  const isMobile = useMediaQuery({ query: '(max-width: 768px)' });
   const [form] = Form.useForm();
   return (
     <Form  
@@ -31,7 +33,7 @@ export default function ContactForm() {
     labelCol={{ span: 200 }}
     wrapperCol={{ span: 500 }}
     layout="vertical"
-    style={{ minWidth: 600, maxWidth: 900 }}>
+    style={{ width: isMobile ? 500 : 900 }}>
       <Form.Item
         name="name"
         label="Name"
