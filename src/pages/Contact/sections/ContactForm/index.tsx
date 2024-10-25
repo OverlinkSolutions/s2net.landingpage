@@ -26,6 +26,7 @@ const SubmitButton = ({ form, children }:any) => {
 
 export default function ContactForm() {
   const isMobile = useMediaQuery({ query: '(max-width: 768px)' });
+  const isTablet = useMediaQuery({ query: '(max-width: 992px)' });
   const [form] = Form.useForm();
   return (
     <Form  
@@ -33,7 +34,7 @@ export default function ContactForm() {
     labelCol={{ span: 200 }}
     wrapperCol={{ span: 500 }}
     layout="vertical"
-    style={{ width: isMobile ? 300 : 900 }}>
+    style={{ width: isMobile ? 300 : isTablet ? 600 : 900 }}>
       <Form.Item
         name="name"
         label="Name"
@@ -103,7 +104,7 @@ export default function ContactForm() {
         </Form.Item>
       <Form.Item>
         <Space>
-          <SubmitButton form={form}>Submit</SubmitButton>
+          <SubmitButton form={form}>Enviar</SubmitButton>
         </Space>
       </Form.Item>
     </Form>
