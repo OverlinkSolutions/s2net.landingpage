@@ -33,7 +33,7 @@ export default function ContactForm() {
     labelCol={{ span: 200 }}
     wrapperCol={{ span: 500 }}
     layout="vertical"
-    style={{ width: isMobile ? 500 : 900 }}>
+    style={{ width: isMobile ? 300 : 900 }}>
       <Form.Item
         name="name"
         label="Name"
