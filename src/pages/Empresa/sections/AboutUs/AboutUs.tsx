@@ -1,7 +1,8 @@
 import { useMediaQuery } from "react-responsive";
 import Typography from "../../../../components/Typography";
 import aboutUs from "./aboutUs.module.sass";
-import sobreImg from "../../../../assets/images/empresa2.png";
+import apresentacao from "../../../../assets/images/apresentacao.png";
+import missao from "../../../../assets/images/missao.png";
 
 export default function AboutUs() {
   const isMobile = useMediaQuery({ query: "(max-width: 768px)" });
@@ -21,7 +22,7 @@ export default function AboutUs() {
             description="Atualmente nossa empresa se encontra em expansão, pois ampliamos nossa área de cobertura e agregamos novos serviços e sempre preocupados com nosso foco principal que é a satisfação dos nossos clientes."
           />
         </div>
-        <img src={sobreImg} alt="s2net_empresa" className={aboutUs.img} />
+        <img src={apresentacao} alt="s2net_empresa" className={aboutUs.img} />
       </section>
       <section id={aboutUs.values} className={`${aboutUs.item} container row`}>
         <div className={`${aboutUs.text} container column`}>
@@ -71,6 +72,7 @@ export default function AboutUs() {
             />
           </div>
         </div>
+        <img src={missao} alt="s2net_empresa" className={aboutUs.img} />
       </section>
     </main>
   );

@@ -1,11 +1,10 @@
 {
   "files": {
-    "main.css": "/static/css/main.20b2affb.css",
-    "main.js": "/static/js/main.5fb834d0.js",
+    "main.css": "/static/css/main.fa945d75.css",
+    "main.js": "/static/js/main.ba466509.js",
     "static/media/bannerITTV.png": "/static/media/bannerITTV.cd70b3f8951cadc93bc7.png",
     "static/media/banner2.png": "/static/media/banner2.11c2f3813e05826730f3.png",
     "static/media/planosmart.webp": "/static/media/planosmart.bb0508b2aeb153b9119d.webp",
-    "static/media/empresa2.png": "/static/media/empresa2.7259ec0094af0c9de6fa.png",
     "static/media/planoplus.webp": "/static/media/planoplus.ae46cf07f6c4ef525873.webp",
     "static/media/planomini.webp": "/static/media/planomini.85aac9f90968ce5ae8ab.webp",
     "static/media/banner1.png": "/static/media/banner1.3e4597868dc29ff6841e.png",
@@ -14,6 +13,8 @@
     "static/media/planototal.webp": "/static/media/planototal.e9ac80573f915791b1ef.webp",
     "static/media/banner2_mobile.png": "/static/media/banner2_mobile.47d566d5c359486bfe31.png",
     "static/media/banner1_mobile.png": "/static/media/banner1_mobile.b8e34df8e2b5de82baa7.png",
+    "static/media/missao.png": "/static/media/missao.c5831112a3ea3b0f4f07.png",
+    "static/media/apresentacao.png": "/static/media/apresentacao.91cce49b8914fb495acd.png",
     "static/media/LOGO-COLORIDA.webp": "/static/media/LOGO-COLORIDA.0abcb6272edf04f0c55d.webp",
     "static/media/footer1.png": "/static/media/footer1.cba7343b73e4cfb4c9d5.png",
     "static/media/LOGO-PRETA.webp": "/static/media/LOGO-PRETA.7ecb0e6a3beda7b62e17.webp",
@@ -25,11 +26,11 @@
     "static/media/30mb.png": "/static/media/30mb.cce58cfc5f752fed349a.png",
     "static/media/footer2.png": "/static/media/footer2.11baad2bedb9964540ad.png",
     "index.html": "/index.html",
-    "main.20b2affb.css.map": "/static/css/main.20b2affb.css.map",
-    "main.5fb834d0.js.map": "/static/js/main.5fb834d0.js.map"
+    "main.fa945d75.css.map": "/static/css/main.fa945d75.css.map",
+    "main.ba466509.js.map": "/static/js/main.ba466509.js.map"
   },
   "entrypoints": [
-    "static/css/main.20b2affb.css",
-    "static/js/main.5fb834d0.js"
+    "static/css/main.fa945d75.css",
+    "static/js/main.ba466509.js"
   ]
 }

@@ -59,7 +59,10 @@ export default function Header(props: { offset: number }) {
         window.scrollTo(0, 0);
         break;
       case Section.PLANS:
-        window.location.href = "/#"+plans.container
+        navigate("/");
+        setTimeout(() => {
+          window.location.href = "/#"+plans.container
+        }, 100);
         break;
       case Section.CONTACT:
         navigate("/contact");

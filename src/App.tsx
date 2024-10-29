@@ -8,7 +8,6 @@ import Brazmovel from './pages/home/sections/Brazmovel';
 import OurServices from './pages/home/sections/OurServices';
 import PromoITTV from './pages/home/sections/PromoITTV';
 
-
 import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';

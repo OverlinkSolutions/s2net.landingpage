@@ -37,7 +37,7 @@ export default function ContactForm() {
     style={{ width: isMobile ? 300 : isTablet ? 600 : 900 }}>
       <Form.Item
         name="name"
-        label="Name"
+        label="Nome"
         rules={[
           {
             required: true,
