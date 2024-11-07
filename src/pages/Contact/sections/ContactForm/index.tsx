@@ -1,10 +1,11 @@
 import React from 'react';
-import { Button, Form, Input, Select, Space } from 'antd';
+import { Button, Form, FormInstance, Input, Select, Space } from 'antd';
 import TextArea from 'antd/es/input/TextArea';
 import { useMediaQuery } from 'react-responsive';
+// import nodemailer from 'nodemailer';
 
 
-const SubmitButton = ({ form, children }:any) => {
+const SubmitButton = ({ form, children }:{form:FormInstance<any>, children:any}) => {
   const [submittable, setSubmittable] = React.useState(false);
   // Watch all values
   const values = Form.useWatch([], form);
@@ -17,12 +18,43 @@ const SubmitButton = ({ form, children }:any) => {
       .catch(() => setSubmittable(false));
   }, [form, values]);
   return (
-    <Button type="primary" htmlType="submit" disabled={!submittable}>
+    <Button onSubmit={() => sendEmail(form)} type="primary" htmlType="submit" disabled={!submittable}>
       {children}
     </Button>
   );
 };
 
+
+const sendEmail = async (form:FormInstance<any>) => {
+}
+// const sendEmail = async (form:FormInstance<any>) => {
+//   const transporter = nodemailer.createTransport({
+//     host: process.env.REACT_APP_EMAIL_HOST,
+//     port: 465,
+//     secure: true,
+//     auth: {
+//       user: process.env.REACT_APP_EMAIL_USER,
+//       pass: process.env.REACT_APP_EMAIL_PASS,
+//     },
+//   });
+
+//   const options = {
+//     from: form.getFieldValue("email"),
+//     to: process.env.REACT_APP_EMAIL_TO,
+//     subject: form.getFieldValue("subject"),
+//     html: `
+//     <h1>Contato</h1>
+//     <p><strong>Nome:</strong> ${form.getFieldValue("name")}</p>
+//     <p><strong>Email:</strong> ${form.getFieldValue("email")}</p>
+//     <p><strong>Telefone:</strong> ${form.getFieldValue("phone")}</p>
+//     <p><strong>Assunto:</strong> ${form.getFieldValue("subject")}</p>
+//     <p><strong>Setor:</strong> ${form.getFieldValue("sector")}</p>
+//     <p><strong>Mensagem:</strong> ${form.getFieldValue("message")}</p>
+//     `,
+//   };
+  
+//   await transporter.sendMail(options);
+// }
 
 export default function ContactForm() {
   const isMobile = useMediaQuery({ query: '(max-width: 768px)' });

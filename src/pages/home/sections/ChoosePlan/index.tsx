@@ -86,11 +86,6 @@ export default function Plans() {
               btnName="Contratar"
               content={
                 <div>
-                  <Typography
-                    title={"300MB"}
-                    alignment="center"
-                    descriptionAlignment="center"
-                  />
                   <div>
                     {generateAdvantages(
                      <RiSpeedUpFill size={iconSize}/>,
@@ -131,11 +126,6 @@ export default function Plans() {
               btnName="Contratar"
               content={
                 <div>
-                  <Typography
-                    title={"200MB"}
-                    alignment="center"
-                    descriptionAlignment="center"
-                  />
                   <div>
                     {generateAdvantages(
                       <RiSpeedUpFill size={iconSize}/>,
@@ -176,11 +166,6 @@ export default function Plans() {
               btnName="Contratar"
               content={
                 <div className={plans.description}>
-                  <Typography
-                    title={"100MB"}
-                    alignment="center"
-                    descriptionAlignment="center"
-                  />
                   <div>
                     {generateAdvantages(
                      <RiSpeedUpFill size={iconSize}/>,
@@ -222,7 +207,6 @@ export default function Plans() {
               btnName="Contratar"
               content={
                 <div className={plans.description}>
-                  <h1 className={plans.cardTitle}>70MB</h1>
                   <div>
                     {generateAdvantages(
                       <RiSpeedUpFill size={iconSize} style={{transform: "scaleX(-1)"}}/>,
@@ -259,7 +243,6 @@ export default function Plans() {
               btnName="Contratar"
               content={
                 <div className={plans.description}>
-                  <h1 className={plans.cardTitle}>50MB</h1>
                   <div>
                     {generateAdvantages(
                       <RiSpeedUpFill size={iconSize} style={{transform: "scaleX(-1)"}}/>,
@@ -296,7 +279,6 @@ export default function Plans() {
               btnName="Contratar"
               content={
                 <div className={plans.description}>
-                  <h1 className={plans.cardTitle}>30MB</h1>
                   <div>
                     {generateAdvantages(
                       <RiSpeedUpFill size={iconSize} style={{transform: "scaleX(-1)"}}/>,
