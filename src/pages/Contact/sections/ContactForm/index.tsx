@@ -18,43 +18,25 @@ const SubmitButton = ({ form, children }:{form:FormInstance<any>, children:any})
       .catch(() => setSubmittable(false));
   }, [form, values]);
   return (
-    <Button onSubmit={() => sendEmail(form)} type="primary" htmlType="submit" disabled={!submittable}>
+    <Button onClick={() => sendWhatsappMessage(form)} type="primary" htmlType="submit" disabled={!submittable}>
       {children}
     </Button>
   );
 };
 
 
-const sendEmail = async (form:FormInstance<any>) => {
+const sendWhatsappMessage = async (form:FormInstance<any>) => {
+  const s2Number = "08000004181";
+  form.validateFields().then(async (values) => {
+    const { name, email, phone, subject, sector, message } = values;
+    const msg = `Nome: ${name}\nE-Mail: ${email}\nTelefone: ${phone}\nAssunto: ${subject}\nSetor: ${sector}\nMensagem: ${message}`;
+    const whatsappLink = `https://wa.me/${s2Number}?text=${encodeURIComponent(msg)}`;
+    window.open(whatsappLink);
+  }).finally(() => {
+    form.resetFields();
+  })
 }
-// const sendEmail = async (form:FormInstance<any>) => {
-//   const transporter = nodemailer.createTransport({
-//     host: process.env.REACT_APP_EMAIL_HOST,
-//     port: 465,
-//     secure: true,
-//     auth: {
-//       user: process.env.REACT_APP_EMAIL_USER,
-//       pass: process.env.REACT_APP_EMAIL_PASS,
-//     },
-//   });
 
-//   const options = {
-//     from: form.getFieldValue("email"),
-//     to: process.env.REACT_APP_EMAIL_TO,
-//     subject: form.getFieldValue("subject"),
-//     html: `
-//     <h1>Contato</h1>
-//     <p><strong>Nome:</strong> ${form.getFieldValue("name")}</p>
-//     <p><strong>Email:</strong> ${form.getFieldValue("email")}</p>
-//     <p><strong>Telefone:</strong> ${form.getFieldValue("phone")}</p>
-//     <p><strong>Assunto:</strong> ${form.getFieldValue("subject")}</p>
-//     <p><strong>Setor:</strong> ${form.getFieldValue("sector")}</p>
-//     <p><strong>Mensagem:</strong> ${form.getFieldValue("message")}</p>
-//     `,
-//   };
-  
-//   await transporter.sendMail(options);
-// }
 
 export default function ContactForm() {
   const isMobile = useMediaQuery({ query: '(max-width: 768px)' });
@@ -73,7 +55,8 @@ export default function ContactForm() {
         rules={[
           {
             required: true,
-            message: "Por favor, insira seu nome"
+            pattern: /^[a-zA-Z\s]*$/,
+            message: "Insira seu nome"
           },
         ]}
       >
@@ -85,7 +68,8 @@ export default function ContactForm() {
         rules={[
           {
             required: true,
-            message: "Por favor, insira seu email"
+            type: 'email',
+            message: "Insira um email válido"
           },
         ]}
       >
@@ -97,7 +81,8 @@ export default function ContactForm() {
         rules={[
           {
             required: true,
-            message: "Por favor, insira seu telefone"
+            pattern: /^\(?[1-9]{2}\)?9[1-9][0-9]{3}-?[0-9]{4}$/,
+            message: "Insira seu telefone, sem espaços"
           },
         ]}
       >
@@ -109,7 +94,8 @@ export default function ContactForm() {
         rules={[
           {
             required: true,
-            message: "Por favor, insira o assunto"
+            min: 5,
+            message: "O assunto precisa conter pelo menos 5 caracteres"
           },
         ]}
       >
@@ -121,7 +107,7 @@ export default function ContactForm() {
         rules={[
           {
             required: true,
-            message: "Por favor, escolha o assunto"
+            message: "Escolha com qual setor quer falar"
           },
         ]}
       >
@@ -131,7 +117,7 @@ export default function ContactForm() {
             <Select.Option value="finance">Financeiro</Select.Option>
           </Select>
       </Form.Item>
-      <Form.Item label="Mensagem">
+      <Form.Item name="message" label="Mensagem">
           <TextArea rows={10} />
         </Form.Item>
       <Form.Item>
