@@ -29,7 +29,13 @@ const sendWhatsappMessage = async (form:FormInstance<any>) => {
   const s2Number = "557908000004181";
   form.validateFields().then(async (values) => {
     const { name, email, phone, subject, sector, message } = values;
-    const msg = `Nome: ${name}\nE-Mail: ${email}\nTelefone: ${phone}\nAssunto: ${subject}\nSetor: ${sector}\nMensagem: ${message}`;
+
+    let setor;
+    if (sector === "sales") setor = "Vendas";
+    else if (sector === "support") setor = "Suporte";
+    else if (sector === "finance") setor = "Financeiro";
+
+    const msg = `Nome: ${name}\nE-Mail: ${email}\nTelefone: ${phone}\nAssunto: ${subject}\nSetor: ${setor}\nMensagem: ${message}`;
     const whatsappLink = `https://wa.me/${s2Number}?text=${encodeURIComponent(msg)}`;
     window.open(whatsappLink);
   }).finally(() => {
