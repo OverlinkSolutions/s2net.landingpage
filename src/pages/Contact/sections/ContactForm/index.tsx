@@ -26,7 +26,7 @@ const SubmitButton = ({ form, children }:{form:FormInstance<any>, children:any})
 
 
 const sendWhatsappMessage = async (form:FormInstance<any>) => {
-  const s2Number = "08000004181";
+  const s2Number = "557908000004181";
   form.validateFields().then(async (values) => {
     const { name, email, phone, subject, sector, message } = values;
     const msg = `Nome: ${name}\nE-Mail: ${email}\nTelefone: ${phone}\nAssunto: ${subject}\nSetor: ${sector}\nMensagem: ${message}`;

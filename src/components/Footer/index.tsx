@@ -41,7 +41,7 @@ export default function Footer() {
           </div>
           <div id={footer.contact}>
             <MdPhone className={footer.icon} />
-            <p onClick={() => window.open("tel:080000041816")}>(79) 0800-000-4181</p>
+            <p onClick={() => window.open("tel:08000004181")}>(79) 0800-000-4181</p>
           </div>
           <div id={footer.contact}>
             <MdOutlineEmail className={footer.icon}/>

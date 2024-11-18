@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.69de7d15.css",
-    "main.js": "/static/js/main.d4641089.js",
+    "main.js": "/static/js/main.37fab1b2.js",
     "static/media/bannerITTV.png": "/static/media/bannerITTV.cd70b3f8951cadc93bc7.png",
     "static/media/banner2.png": "/static/media/banner2.11c2f3813e05826730f3.png",
     "static/media/planosmart.webp": "/static/media/planosmart.bb0508b2aeb153b9119d.webp",
@@ -27,10 +27,10 @@
     "static/media/100mb.png": "/static/media/100mb.f410478b680a3649c932.png",
     "index.html": "/index.html",
     "main.69de7d15.css.map": "/static/css/main.69de7d15.css.map",
-    "main.d4641089.js.map": "/static/js/main.d4641089.js.map"
+    "main.37fab1b2.js.map": "/static/js/main.37fab1b2.js.map"
   },
   "entrypoints": [
     "static/css/main.69de7d15.css",
-    "static/js/main.d4641089.js"
+    "static/js/main.37fab1b2.js"
   ]
 }
