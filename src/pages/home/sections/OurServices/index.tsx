@@ -4,11 +4,40 @@ import { BsFilePerson } from "react-icons/bs";
 import { FaWhatsapp, FaFileSignature } from "react-icons/fa";
 
 import our_services from "./our_services.module.sass";
+import plans from "../ChoosePlan/plans.module.sass";
 import { useMediaQuery } from "react-responsive";
+
+enum ServiceButton {
+  SUPPORT = "SUPPORT",
+  WHATSAPP = "WHATSAPP",
+  ONLINE_PURCHASE = "ONLINE_CONTRACT",
+  SUBSCRIBER_CENTER = "SUBSCRIBER_CENTER",
+} 
 
 export default function OurServices() {
   const isMobile = useMediaQuery({ query: "(max-width: 768px)" });
   const iconSize = isMobile ? 70 : 50;
+
+  const s2Number = "557908000004181";
+
+  const handleClick = (service: ServiceButton) => {
+    switch (service) {
+      case ServiceButton.SUPPORT:
+        window.open(`https://wa.me/${s2Number}?text=${encodeURIComponent("Olá, gostaria de entrar em contato com o suporte")}`);
+        break;
+      case ServiceButton.WHATSAPP:
+        window.open(`https://wa.me/${s2Number}?text=${encodeURIComponent("Olá, gostaria de entrar em contato com um atendente")}`);
+        break;
+      case ServiceButton.ONLINE_PURCHASE:
+        setTimeout(() => {
+          window.location.href = "/#"+plans.container
+        }, 100);
+        break;
+      case ServiceButton.SUBSCRIBER_CENTER:
+        window.open("https://central.s2net.net/central_assinante_web/login", "_blank");
+        break;
+    }
+  }
 
   return (
     <>
@@ -25,7 +54,7 @@ export default function OurServices() {
           descriptionAlignment="center"
         />
         <div id={our_services.container} className="container row">
-          <div id={our_services.item} className={"container column"}>
+          <div id={our_services.item} onClick={() => handleClick(ServiceButton.SUPPORT)} className={"container column"}>
             {/* <img src={img_novoPublico} alt="Alcance um novo público" /> */}
             <BiSupport size={iconSize} />
             <Typography
@@ -34,7 +63,7 @@ export default function OurServices() {
               description="Abertura de Suporte 24h através da nossa Central de Atendimento."
             />
           </div>
-          <div id={our_services.item} className={"container column"}>
+          <div id={our_services.item} onClick={() => handleClick(ServiceButton.WHATSAPP)} className={"container column"}>
             {/* <img src={img_quebreBarreiras} alt="Alcance um novo público" /> */}
             <FaWhatsapp size={iconSize} />
             <Typography
@@ -43,7 +72,7 @@ export default function OurServices() {
               description="Fale diretamente com nossos atendentes! Disponível somente em horário comercial! "
             />
           </div>
-          <div id={our_services.item} className={"container column"}>
+          <div id={our_services.item} onClick={() => handleClick(ServiceButton.ONLINE_PURCHASE)} className={"container column"}>
             {/* <img src={img_aumenteVisibilidade} alt="Alcance um novo público" /> */}
             <FaFileSignature size={iconSize} />
             <Typography
@@ -52,7 +81,7 @@ export default function OurServices() {
               description="Fale com nossa equipe e contrate sem sair de casa."
             />
           </div>
-          <div id={our_services.item} className={"container column"}>
+          <div id={our_services.item} onClick={() => handleClick(ServiceButton.SUBSCRIBER_CENTER)} className={"container column"}>
             {/* <img src={img_aumenteVisibilidade} alt="Alcance um novo público" /> */}
             <BsFilePerson size={iconSize} />
             <Typography
