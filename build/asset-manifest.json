@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.69de7d15.css",
-    "main.js": "/static/js/main.35c60071.js",
+    "main.js": "/static/js/main.e330d826.js",
     "static/media/bannerITTV.png": "/static/media/bannerITTV.cd70b3f8951cadc93bc7.png",
     "static/media/banner2.png": "/static/media/banner2.11c2f3813e05826730f3.png",
     "static/media/planosmart.webp": "/static/media/planosmart.bb0508b2aeb153b9119d.webp",
@@ -19,18 +19,16 @@
     "static/media/footer1.png": "/static/media/footer1.cba7343b73e4cfb4c9d5.png",
     "static/media/LOGO-PRETA.webp": "/static/media/LOGO-PRETA.7ecb0e6a3beda7b62e17.webp",
     "static/media/footer2.png": "/static/media/footer2.11baad2bedb9964540ad.png",
-    "static/media/30mb.png": "/static/media/30mb.828e788eb4f4fbe134a6.png",
     "static/media/300mb.png": "/static/media/300mb.da85172dd0bef1802df4.png",
-    "static/media/70mb.png": "/static/media/70mb.60e56964860454a3625f.png",
-    "static/media/50mb.png": "/static/media/50mb.5e97ad72ea8a97e4d05d.png",
+    "static/media/500mb.png": "/static/media/500mb.0cb40841d2bfaa348b7d.png",
     "static/media/200mb.png": "/static/media/200mb.2b71959f8c6d3c74b149.png",
     "static/media/100mb.png": "/static/media/100mb.f410478b680a3649c932.png",
     "index.html": "/index.html",
     "main.69de7d15.css.map": "/static/css/main.69de7d15.css.map",
-    "main.35c60071.js.map": "/static/js/main.35c60071.js.map"
+    "main.e330d826.js.map": "/static/js/main.e330d826.js.map"
   },
   "entrypoints": [
     "static/css/main.69de7d15.css",
-    "static/js/main.35c60071.js"
+    "static/js/main.e330d826.js"
   ]
 }

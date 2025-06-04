@@ -11,12 +11,10 @@ import { LuBookMarked } from "react-icons/lu";
 import NewCard from "../../../../components/NewCard";
 import Typography from "../../../../components/Typography";
 
-import trintamb from "../../../../assets/images/30mb.png";
-import cinquentamb from "../../../../assets/images/50mb.png";
-import setentamb from "../../../../assets/images/70mb.png";
 import cemmb from "../../../../assets/images/100mb.png";
 import duzentosmb from "../../../../assets/images/200mb.png";
 import trezentosmb from "../../../../assets/images/300mb.png";
+import quinhentosmb from "../../../../assets/images/500mb.png";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { A11y, Autoplay, Pagination } from "swiper/modules";
 import useWindowDimensions from "../../../../utils/resizeWindow";
@@ -79,9 +77,49 @@ export default function Plans() {
         >
           <SwiperSlide className={plans.cardItem}>
             <NewCard
+              title="500mb"
+              image={quinhentosmb}
+              price={79.9}
+              link="https://wa.me/557908000004181?text=Olá, Vim pelo site da S2Net e gostaria de contratar o plano de 500MB"
+              btnName="Contratar"
+              content={
+                <div>
+                  <div>
+                    {generateAdvantages(
+                     <RiSpeedUpFill size={iconSize}/>,
+                      "Conexão com fibra óptica",
+                      "10pt"
+                    )}
+                    {generateAdvantages(
+                      <MdLiveTv size={iconSize} />,
+                      "Plano Ittv Smart Total incluso",
+                      "10pt"
+                    )}
+                    {generateAdvantages(
+                      <LuBookMarked size={iconSize} />,
+                      "Acesso a plataforma LevEduca",
+                      "10pt"
+                    )}
+                    {generateAdvantages(
+                      <BiSupport size={iconSize} />,
+                      "Suporte Técnico Dedicado",
+                      "10pt"
+                    )}
+                    {generateAdvantages(
+                      <FiTool size={iconSize} />,
+                      "Instalação Grátis",
+                      "10pt"
+                    )}
+                  </div>
+                </div>
+              }
+            />
+          </SwiperSlide>
+          <SwiperSlide className={plans.cardItem}>
+            <NewCard
               title="300MB"
               image={trezentosmb}
-              price={89.9}
+              price={69.9}
               link="https://wa.me/557908000004181?text=Olá, Vim pelo site da S2Net e gostaria de contratar o plano de 300MB"
               btnName="Contratar"
               content={
@@ -121,7 +159,7 @@ export default function Plans() {
             <NewCard
               title="200MB"
               image={duzentosmb}
-              price={79.9}
+              price={59.9}
               link="https://wa.me/557908000004181?text=Olá, Vim pelo site da S2Net e gostaria de contratar o plano de 200MB"
               btnName="Contratar"
               content={
@@ -161,7 +199,7 @@ export default function Plans() {
             <NewCard
               title="100MB"
               image={cemmb}
-              price={69.9}
+              price={49.9}
               link="https://wa.me/557908000004181?text=Olá, Vim pelo site da S2Net e gostaria de contratar o plano de 100MB"
               btnName="Contratar"
               content={
@@ -190,114 +228,6 @@ export default function Plans() {
                     {generateAdvantages(
                       <FiTool size={iconSize} />,
                       "Instalação Grátis",
-                      "10pt"
-                    )}
-                  </div>
-                </div>
-              }
-            />
-          </SwiperSlide>
-          <SwiperSlide className={plans.cardItem}>
-            <NewCard
-              title="70MB"
-              image={setentamb}
-              description="Contrate agora por apenas*"
-              price={"R$ 59.90*"}
-              link="https://wa.me/557908000004181?text=Olá, Vim pelo site da S2Net e gostaria de contratar o plano de 70MB"
-              btnName="Contratar"
-              content={
-                <div className={plans.description}>
-                  <div>
-                    {generateAdvantages(
-                      <RiSpeedUpFill size={iconSize} style={{transform: "scaleX(-1)"}}/>,
-                      "Conexão via cabo",
-                      "10pt"
-                    )}
-                    {generateAdvantages(
-                      <MdLiveTv size={iconSize} />,
-                      "Plano Ittv Smart Mini incluso",
-                      "10pt"
-                    )}
-                    {generateAdvantages(
-                      <LuBookMarked size={iconSize} />,
-                      "Acesso a plataforma LevEduca",
-                      "10pt"
-                    )}
-                    {generateAdvantages(
-                      <BiSupport size={iconSize} />,
-                      "Suporte Técnico Dedicado",
-                      "10pt"
-                    )}
-                  </div>
-                </div>
-              }
-            />
-          </SwiperSlide>
-          <SwiperSlide className={plans.cardItem}>
-            <NewCard
-              title="50MB"
-              image={cinquentamb}
-              description="Contrate agora por apenas*"
-              price={"R$ 49.90*"}
-              link="https://wa.me/557908000004181?text=Olá, Vim pelo site da S2Net e gostaria de contratar o plano de 50MB"
-              btnName="Contratar"
-              content={
-                <div className={plans.description}>
-                  <div>
-                    {generateAdvantages(
-                      <RiSpeedUpFill size={iconSize} style={{transform: "scaleX(-1)"}}/>,
-                      "Conexão via cabo",
-                      "10pt"
-                    )}
-                    {generateAdvantages(
-                      <MdLiveTv size={iconSize} />,
-                      "Plano Ittv Smart Mini incluso",
-                      "10pt"
-                    )}
-                    {generateAdvantages(
-                      <LuBookMarked size={iconSize} />,
-                      "Acesso a plataforma LevEduca",
-                      "10pt"
-                    )}
-                    {generateAdvantages(
-                      <BiSupport size={iconSize} />,
-                      "Suporte Técnico Dedicado",
-                      "10pt"
-                    )}
-                  </div>
-                </div>
-              }
-            />
-          </SwiperSlide>
-          <SwiperSlide className={plans.cardItem}>
-            <NewCard
-              title="30 MB"
-              image={trintamb}
-              description="Contrate agora por apenas*"
-              price={"R$ 39.90*"}
-              link="https://wa.me/557908000004181?text=Olá, Vim pelo site da S2Net e gostaria de contratar o plano de 30MB"
-              btnName="Contratar"
-              content={
-                <div className={plans.description}>
-                  <div>
-                    {generateAdvantages(
-                      <RiSpeedUpFill size={iconSize} style={{transform: "scaleX(-1)"}}/>,
-                      "Conexão via cabo",
-                      "10pt"
-                    )}
-                    {generateAdvantages(
-                      <MdLiveTv size={iconSize} />,
-                      "Plano Ittv Smart Abertos incluso",
-                      "10pt"
-                    )}
-                    {generateAdvantages(
-                      <LuBookMarked size={iconSize} />,
-                      "Acesso a plataforma LevEduca",
-                      "10pt"
-                    )}
-                    {generateAdvantages(
-                      <GiReceiveMoney size={iconSize} />,
-                      "Ótimo Custo-Benefício",
                       "10pt"
                     )}
                   </div>
