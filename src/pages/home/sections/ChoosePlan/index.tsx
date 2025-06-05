@@ -92,7 +92,7 @@ export default function Plans() {
                     )}
                     {generateAdvantages(
                       <MdLiveTv size={iconSize} />,
-                      "Plano Ittv Smart Total incluso",
+                      "Plano Ittv Smart Canais Abertos",
                       "10pt"
                     )}
                     {generateAdvantages(
@@ -132,7 +132,7 @@ export default function Plans() {
                     )}
                     {generateAdvantages(
                       <MdLiveTv size={iconSize} />,
-                      "Plano Ittv Smart Total incluso",
+                      "Plano Ittv Smart Canais Abertos",
                       "10pt"
                     )}
                     {generateAdvantages(
@@ -172,7 +172,7 @@ export default function Plans() {
                     )}
                     {generateAdvantages(
                       <MdLiveTv size={iconSize} />,
-                      "Plano Ittv Smart Total incluso",
+                      "Plano Ittv Smart Canais Abertos",
                       "10pt"
                     )}
                     {generateAdvantages(
@@ -212,7 +212,7 @@ export default function Plans() {
                     )}
                     {generateAdvantages(
                       <MdLiveTv size={iconSize} />,
-                      "Plano Ittv Smart Plus incluso",
+                      "Plano Ittv Smart Canais Abertos",
                       "10pt"
                     )}
                     {generateAdvantages(
