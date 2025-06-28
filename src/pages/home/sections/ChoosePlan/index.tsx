@@ -18,12 +18,14 @@ import quinhentosmb from "../../../../assets/images/500mb.png";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { A11y, Autoplay, Pagination } from "swiper/modules";
 import useWindowDimensions from "../../../../utils/resizeWindow";
+import plansBackground from "../../../../assets/images/plansBackground.jpg";
+import plansBackground2 from "../../../../assets/images/plansBackground2.jpg";
 
 export default function Plans() {
   const { width, height } = useWindowDimensions();
 
   const isMobile = useMediaQuery({ query: "(max-width: 768px)" });
-  const iconSize = isMobile ? 30 : 25;
+  const iconSize = isMobile ? 25 : 20;
 
   const generateAdvantages = (
     icon: any,
@@ -39,6 +41,7 @@ export default function Plans() {
           description={description}
           descriptionAlignment="left"
           descriptionFontSize={fontSize}
+          className={plans.typography}
         />
       </div>
     ) : (
@@ -60,6 +63,7 @@ export default function Plans() {
         <h1>Escolha seu plano e fique conectado com o mundo</h1>
       </div>
       <div id={plans.cards} className="container row">
+        <img src={plansBackground} alt="" className={plans.cardsBackground}/>
         <Swiper
           id={plans.contentRow}
           className="container"
@@ -83,32 +87,32 @@ export default function Plans() {
               link="https://wa.me/557908000004181?text=Olá, Vim pelo site da S2Net e gostaria de contratar o plano de 500MB"
               btnName="Contratar"
               content={
-                <div>
+                <div className={plans.description}>
                   <div>
                     {generateAdvantages(
                      <RiSpeedUpFill size={iconSize}/>,
                       "Conexão com fibra óptica",
-                      "10pt"
+                      "9pt"
                     )}
                     {generateAdvantages(
                       <MdLiveTv size={iconSize} />,
                       "Plano Ittv Smart Canais Abertos",
-                      "10pt"
+                      "9pt"
                     )}
                     {generateAdvantages(
                       <LuBookMarked size={iconSize} />,
                       "Acesso a plataforma LevEduca",
-                      "10pt"
+                      "9pt"
                     )}
                     {generateAdvantages(
                       <BiSupport size={iconSize} />,
                       "Suporte Técnico Dedicado",
-                      "10pt"
+                      "9pt"
                     )}
                     {generateAdvantages(
                       <FiTool size={iconSize} />,
                       "Instalação Grátis",
-                      "10pt"
+                      "9pt"
                     )}
                   </div>
                 </div>
@@ -123,32 +127,32 @@ export default function Plans() {
               link="https://wa.me/557908000004181?text=Olá, Vim pelo site da S2Net e gostaria de contratar o plano de 300MB"
               btnName="Contratar"
               content={
-                <div>
+                <div className={plans.description}>
                   <div>
                     {generateAdvantages(
                      <RiSpeedUpFill size={iconSize}/>,
                       "Conexão com fibra óptica",
-                      "10pt"
+                      "9pt"
                     )}
                     {generateAdvantages(
                       <MdLiveTv size={iconSize} />,
                       "Plano Ittv Smart Canais Abertos",
-                      "10pt"
+                      "9pt"
                     )}
                     {generateAdvantages(
                       <LuBookMarked size={iconSize} />,
                       "Acesso a plataforma LevEduca",
-                      "10pt"
+                      "9pt"
                     )}
                     {generateAdvantages(
                       <BiSupport size={iconSize} />,
                       "Suporte Técnico Dedicado",
-                      "10pt"
+                      "9pt"
                     )}
                     {generateAdvantages(
                       <FiTool size={iconSize} />,
                       "Instalação Grátis",
-                      "10pt"
+                      "9pt"
                     )}
                   </div>
                 </div>
@@ -163,32 +167,32 @@ export default function Plans() {
               link="https://wa.me/557908000004181?text=Olá, Vim pelo site da S2Net e gostaria de contratar o plano de 200MB"
               btnName="Contratar"
               content={
-                <div>
+                <div className={plans.description}>
                   <div>
                     {generateAdvantages(
                       <RiSpeedUpFill size={iconSize}/>,
                       "Conexão com fibra óptica",
-                      "10pt"
+                      "9pt"
                     )}
                     {generateAdvantages(
                       <MdLiveTv size={iconSize} />,
                       "Plano Ittv Smart Canais Abertos",
-                      "10pt"
+                      "9pt"
                     )}
                     {generateAdvantages(
                       <LuBookMarked size={iconSize} />,
                       "Acesso a plataforma LevEduca",
-                      "10pt"
+                      "9pt"
                     )}
                     {generateAdvantages(
                       <BiSupport size={iconSize} />,
                       "Suporte Técnico Dedicado",
-                      "10pt"
+                      "9pt"
                     )}
                     {generateAdvantages(
                       <FiTool size={iconSize} />,
                       "Instalação Grátis",
-                      "10pt"
+                      "9pt"
                     )}
                   </div>
                 </div>
@@ -208,27 +212,27 @@ export default function Plans() {
                     {generateAdvantages(
                      <RiSpeedUpFill size={iconSize}/>,
                       "Conexão com fibra óptica",
-                      "10pt"
+                      "9pt"
                     )}
                     {generateAdvantages(
                       <MdLiveTv size={iconSize} />,
                       "Plano Ittv Smart Canais Abertos",
-                      "10pt"
+                      "9pt"
                     )}
                     {generateAdvantages(
                       <LuBookMarked size={iconSize} />,
                       "Acesso a plataforma LevEduca",
-                      "10pt"
+                      "9pt"
                     )}
                     {generateAdvantages(
                       <BiSupport size={iconSize} />,
                       "Suporte Técnico Dedicado",
-                      "10pt"
+                      "9pt"
                     )}
                     {generateAdvantages(
                       <FiTool size={iconSize} />,
                       "Instalação Grátis",
-                      "10pt"
+                      "9pt"
                     )}
                   </div>
                 </div>
