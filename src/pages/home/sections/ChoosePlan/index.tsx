@@ -68,12 +68,12 @@ export default function Plans() {
           id={plans.contentRow}
           className="container"
           modules={[Pagination, A11y, Autoplay]}
-          spaceBetween={50}
+          spaceBetween={30}
           autoplay={{
             delay: 2000,
             disableOnInteraction: true,
           }}
-          slidesPerView={width / 340}
+          slidesPerView={width / 300}
           navigation={{
             nextEl: ".swiper-button-next",
             prevEl: ".swiper-button-prev",
