@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/static/css/main.1a0bab39.css",
+    "main.css": "/static/css/main.6bc63149.css",
     "main.js": "/static/js/main.7940907f.js",
     "static/media/bannerITTV.png": "/static/media/bannerITTV.cd70b3f8951cadc93bc7.png",
     "static/media/banner2.png": "/static/media/banner2.11c2f3813e05826730f3.png",
@@ -25,11 +25,11 @@
     "static/media/200mb.png": "/static/media/200mb.2b71959f8c6d3c74b149.png",
     "static/media/100mb.png": "/static/media/100mb.f410478b680a3649c932.png",
     "index.html": "/index.html",
-    "main.1a0bab39.css.map": "/static/css/main.1a0bab39.css.map",
+    "main.6bc63149.css.map": "/static/css/main.6bc63149.css.map",
     "main.7940907f.js.map": "/static/js/main.7940907f.js.map"
   },
   "entrypoints": [
-    "static/css/main.1a0bab39.css",
+    "static/css/main.6bc63149.css",
     "static/js/main.7940907f.js"
   ]
 }
