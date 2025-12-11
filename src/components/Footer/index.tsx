@@ -22,7 +22,7 @@ export default function Footer() {
           <div id={footer.contact}>
             <MdLocationOn className={footer.icon}/>
             <p style={{ textAlign: "center" }} onClick={() => window.open("https://maps.app.goo.gl/uBpwm2tZ3wPecBqJ7","_blank")}>
-              Rua Elisio Araujo, 37
+              Rua Francisco Bragança, 150
               <br />
               Bairro São Cristovão 
               <br />
@@ -41,7 +41,7 @@ export default function Footer() {
           </div>
           <div id={footer.contact}>
             <MdPhone className={footer.icon} />
-            <p onClick={() => window.open("tel:08000004181")}>(79) 0800-000-4181</p>
+            <p onClick={() => window.open("tel:08000004181")}>0800-000-4181</p>
           </div>
           <div id={footer.contact}>
             <MdOutlineEmail className={footer.icon}/>
@@ -61,8 +61,8 @@ export default function Footer() {
         </aside>
       </footer>
       <footer id={footer.under} className="container column">
-        <span>
-          © {new Date().getFullYear()} S2 NET TELECOM - Todos os direitos reservados
+        <span style={{ textAlign: 'center' }}>
+          © {new Date().getFullYear()} S2 NET TELECOM - Samuel da Silva LTDA 35.218.368/0001-05 - Todos os direitos reservados
         </span>
         <span id={footer.overlink} onClick={() => window.open("https://overlinksolutions.com.br")}>
          Desenvolvido por Overlink Solutions
