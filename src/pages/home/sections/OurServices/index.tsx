@@ -61,6 +61,7 @@ export default function OurServices() {
               alignment="center"
               title="Suporte 24/7"
               description="Abertura de Suporte 24h através da nossa Central de Atendimento."
+              titleFontSize="2rem"
             />
           </div>
           <div id={our_services.item} onClick={() => handleClick(ServiceButton.WHATSAPP)} className={"container column"}>
@@ -70,6 +71,7 @@ export default function OurServices() {
               alignment="center"
               title="Atendimento Via WhatsApp"
               description="Fale diretamente com nossos atendentes! Disponível somente em horário comercial! "
+              titleFontSize="2rem"
             />
           </div>
           <div id={our_services.item} onClick={() => handleClick(ServiceButton.ONLINE_PURCHASE)} className={"container column"}>
@@ -79,6 +81,7 @@ export default function OurServices() {
               alignment="center"
               title="Contrate On-line"
               description="Fale com nossa equipe e contrate sem sair de casa."
+              titleFontSize="2rem"
             />
           </div>
           <div id={our_services.item} onClick={() => handleClick(ServiceButton.SUBSCRIBER_CENTER)} className={"container column"}>
@@ -88,6 +91,7 @@ export default function OurServices() {
               alignment="center"
               title="Central do Assinante"
               description="Segunda Via de Boletos, acompanhamento de Suporte e mudanças em contrato."
+              titleFontSize="2rem"
             />
           </div>
         </div>

@@ -1,8 +1,17 @@
 import footer from "./footer.module.sass";
 import { MdLocationOn, MdPhone, MdOutlineEmail } from "react-icons/md";
 import { BsFacebook, BsInstagram } from "react-icons/bs";
+import { useNavigate } from "react-router-dom";
 
 export default function Footer() {
+    const navigate = useNavigate();
+
+    const handleClickPrivacy = () => {
+      navigate("/privacidade")
+      setTimeout(() => {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      }, 0);
+    }
   return (
     <>
       <footer id={footer.container} className="container autowrap">
@@ -21,7 +30,7 @@ export default function Footer() {
           <h2>Contato</h2>
           <div id={footer.contact}>
             <MdLocationOn className={footer.icon}/>
-            <p style={{ textAlign: "center" }} onClick={() => window.open("https://maps.app.goo.gl/uBpwm2tZ3wPecBqJ7","_blank")}>
+            <p style={{ textAlign: "center" }} onClick={() => window.open("https://maps.app.goo.gl/TYrMJuAATUGwStdg9","_blank")}>
               Rua Francisco Bragança, 150
               <br />
               Bairro São Cristovão 
@@ -64,9 +73,14 @@ export default function Footer() {
         <span style={{ textAlign: 'center' }}>
           © {new Date().getFullYear()} S2 NET TELECOM - Samuel da Silva LTDA 35.218.368/0001-05 - Todos os direitos reservados
         </span>
-        <span id={footer.overlink} onClick={() => window.open("https://overlinksolutions.com.br")}>
-         Desenvolvido por Overlink Solutions
-        </span>
+        <div id={footer.links}>
+          <span id={footer.overlink} onClick={handleClickPrivacy}>
+          Política de privacidade
+          </span>
+          <span id={footer.overlink} onClick={() => window.open("https://overlinksolutions.com.br")}>
+          Desenvolvido por Overlink Solutions
+          </span>
+        </div>
       </footer>
     </>
   );

@@ -110,6 +110,7 @@ export default function Brazmovel() {
                 <Typography
                 title={"Pré 4GB"}
                 alignment="center"
+                titleFontSize="24pt"
                 description={
                   "Pra você que quer ter controle total dos seus gastos."
                     }
@@ -148,6 +149,7 @@ export default function Brazmovel() {
                     alignment="center"
                     description={"Nosso plano mais vendido!"}
                     descriptionAlignment="center"
+                    titleFontSize="24pt"
                   />
                   {generateAdvantages(
                     <BiReceipt size={iconSize} />,
@@ -185,6 +187,7 @@ export default function Brazmovel() {
                     alignment="center"
                     description={"Nosso plano custo benefício!"}
                     descriptionAlignment="center"
+                    titleFontSize="24pt"
                   />
                   <div className={brazmovel.descriptionItems}>
                   {generateAdvantages(
@@ -228,6 +231,7 @@ export default function Brazmovel() {
                     title={"23GB"}
                     alignment="center"
                     description={"Nosso plano top de linha!"}
+                    titleFontSize="24pt"
                     descriptionAlignment="center"
                   />
                   {generateAdvantages(

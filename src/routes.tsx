@@ -3,6 +3,7 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Empresa from './pages/Empresa';
 import NotFound from './pages/404/404';
 import Contact from './pages/Contact';
+import PrivacyPolicy from './pages/Privacidade';
 
 
 export default function AppRoutes() {
@@ -13,6 +14,7 @@ export default function AppRoutes() {
         <Route index path="/" element={<App />} />
         <Route path="/empresa" element={<Empresa />} />
         <Route path="/contact" element={<Contact />} />
+        <Route path="/privacidade" element={<PrivacyPolicy />} />
         <Route path="*" element={<NotFound />} />
         {/* {
           dummyRoutes.map((route) => (

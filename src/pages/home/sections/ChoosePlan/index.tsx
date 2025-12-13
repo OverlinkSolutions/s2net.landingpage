@@ -63,8 +63,8 @@ export default function Plans() {
         <h1>Escolha seu plano e fique conectado com o mundo</h1>
       </div>
       <div id={plans.cards} className="container row">
-        <img src={plansBackground} alt="" className={plans.cardsBackground}/>
-        <Swiper
+        <div className={plans.cardsBackground}/>
+        {/* <Swiper
           id={plans.contentRow}
           className="container"
           modules={[Pagination, A11y, Autoplay]}
@@ -73,13 +73,15 @@ export default function Plans() {
             delay: 2000,
             disableOnInteraction: true,
           }}
-          slidesPerView={width / 300}
+          slidesPerView={2}
           navigation={{
             nextEl: ".swiper-button-next",
             prevEl: ".swiper-button-prev",
           }}
-        >
-          <SwiperSlide className={plans.cardItem}>
+        > */}
+        <div id={plans.contentRow} className="container">
+          {/* <SwiperSlide className={plans.cardItem}> */}
+          <div className={plans.cardItem}>
             <NewCard
               title="500mb"
               image={quinhentosmb}
@@ -90,7 +92,7 @@ export default function Plans() {
                 <div className={plans.description}>
                   <div>
                     {generateAdvantages(
-                     <RiSpeedUpFill size={iconSize}/>,
+                      <RiSpeedUpFill size={iconSize} />,
                       "Conexão com fibra óptica",
                       "9pt"
                     )}
@@ -118,8 +120,10 @@ export default function Plans() {
                 </div>
               }
             />
-          </SwiperSlide>
-          <SwiperSlide className={plans.cardItem}>
+          </div>
+          {/* </SwiperSlide> */}
+          {/* <SwiperSlide className={plans.cardItem}> */}
+          <div className={plans.cardItem}>
             <NewCard
               title="300MB"
               image={trezentosmb}
@@ -130,7 +134,7 @@ export default function Plans() {
                 <div className={plans.description}>
                   <div>
                     {generateAdvantages(
-                     <RiSpeedUpFill size={iconSize}/>,
+                      <RiSpeedUpFill size={iconSize} />,
                       "Conexão com fibra óptica",
                       "9pt"
                     )}
@@ -158,8 +162,10 @@ export default function Plans() {
                 </div>
               }
             />
-          </SwiperSlide>
-          <SwiperSlide className={plans.cardItem}>
+          </div>
+          {/* </SwiperSlide> */}
+          {/* <SwiperSlide className={plans.cardItem}> */}
+          <div className={plans.cardItem}>
             <NewCard
               title="200MB"
               image={duzentosmb}
@@ -170,7 +176,7 @@ export default function Plans() {
                 <div className={plans.description}>
                   <div>
                     {generateAdvantages(
-                      <RiSpeedUpFill size={iconSize}/>,
+                      <RiSpeedUpFill size={iconSize} />,
                       "Conexão com fibra óptica",
                       "9pt"
                     )}
@@ -198,8 +204,10 @@ export default function Plans() {
                 </div>
               }
             />
-          </SwiperSlide>
-          <SwiperSlide className={plans.cardItem}>
+          </div>
+          {/* </SwiperSlide> */}
+          {/* <SwiperSlide className={plans.cardItem}> */}
+          <div className={plans.cardItem}>
             <NewCard
               title="100MB"
               image={cemmb}
@@ -210,7 +218,7 @@ export default function Plans() {
                 <div className={plans.description}>
                   <div>
                     {generateAdvantages(
-                     <RiSpeedUpFill size={iconSize}/>,
+                      <RiSpeedUpFill size={iconSize} />,
                       "Conexão com fibra óptica",
                       "9pt"
                     )}
@@ -238,8 +246,10 @@ export default function Plans() {
                 </div>
               }
             />
-          </SwiperSlide>
-        </Swiper>
+          </div>
+          {/* </SwiperSlide> */}
+          {/* </Swiper> */}
+        </div>
       </div>
       <div id={plans.cards} className="container row">
         <p>* Apenas para clientes com pagamento em dia</p>
